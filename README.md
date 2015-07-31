@@ -3,6 +3,8 @@ redux-tutorial
 
 This repository contains a step by step tutorial to get a grasp about flux and most particulary about [Redux](https://github.com/gaearon/redux).
 
+**This is still a WIP.**
+
 ### Prerequisites
 It is required for you to know a bit of ES6 to understand correctly some of the examples given in this repo. Be also aware that this tutorial targets redux 1.0.0.
 
@@ -19,7 +21,7 @@ It is required for you to know a bit of ES6 to understand correctly some of the 
 
 This tutorial is splitted in js file to be read as is and they are numbered in the preferred order of browsing.
 
-Start with the first tutorial: [Simple action creator](blob/master/1_simple-action-creator.js)
+Start with the first tutorial: [Simple action creator](1_simple-action-creator.js)
 
 ### Run an example
 
