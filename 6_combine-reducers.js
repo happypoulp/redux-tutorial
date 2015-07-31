@@ -1,4 +1,4 @@
-// Tutorial 5
+// Tutorial 6 - combine-reducers.js
 
 // We're now starting to get a grasp of what a reducer is...
 

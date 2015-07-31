@@ -1,4 +1,4 @@
-// Tutorial 3
+// Tutorial 4 - simple-reducer.js
 
 // Now that we know how to create a redux instance that will hold the state of our application
 // we will focus on those reducers function that will allow to transform this state.

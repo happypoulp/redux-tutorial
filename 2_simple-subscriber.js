@@ -1,4 +1,4 @@
-// Tutorial 1
+// Tutorial 2 - simple-subscriber.js
 
 // First things first, let's write a theoretical subscriber
 

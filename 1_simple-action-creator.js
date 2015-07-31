@@ -1,4 +1,4 @@
-// Tutorial 0
+// Tutorial 1 - simple-action-creator.js
 
 // The action creator is just a function...
 var actionCreator = function() {

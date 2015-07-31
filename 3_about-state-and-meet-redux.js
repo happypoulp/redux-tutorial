@@ -1,4 +1,4 @@
-// Tutorial 2
+// Tutorial 3 - about-state-and-meet-redux.js
 
 // Sometimes, the actions that we'll handle in our application will not only be made to inform us
 // that something happened but also to tell us that a data needs to be updated.

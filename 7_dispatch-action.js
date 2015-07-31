@@ -1,4 +1,4 @@
-// Tutorial 6
+// Tutorial 7 - dispatch-action.js
 
 // So far we've focused on building our reducer(s) and we've not dispatched any of our own actions.
 // We'll keep the same reducers from our previous tutorial and handle few actions:

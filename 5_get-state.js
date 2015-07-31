@@ -1,4 +1,4 @@
-// Tutorial 4
+// Tutorial 5 - get-state.js
 
 // How do we retrieve the state from our redux instance?
 
