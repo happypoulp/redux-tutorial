@@ -1,25 +1,43 @@
 // Tutorial 1 - simple-action-creator.js
 
+// We started to talk a little about actions in the introduction but what exactly are those "action creators"
+// and how are they linked to "actions"?
+
+// It's actually so simple that few lines of code can explain it all!
+
 // The action creator is just a function...
 var actionCreator = function() {
-    // ...that returns an action
+    // ...that creates an action (yeah the name action creator is pretty obvious now) and returns it
     return {
         type: 'AN_ACTION'
     }
 }
 
-console.log(actionCreator)
+// So is that all? yes.
+
+// However one thing to note is the format of the action. This is kind of a convention in flux
+// that the action is an object that contains a "type" property. This type allow for further
+// handling of the action. Of course, the action can also contain other property to 
+// pass any data you want.
+
+// We also see later that the action creator can actually return something else than an action,
+// like a function. This will be extremely useful for async action handling (more on that 
+// in dispatch-async-action.js). 
+
+// We can call this action creator and get an action as expected:
+console.log(actionCreator())
+// Output: { type: 'AN_ACTION' }
 
 // Ok, this works but it does not go anywhere...
-// Let's have this action be sent somewhere so that 
-// anyone interested could know that something happened and could act accordingly
-// We call this process "Dispatching an action"
+// What we need is to have this action to be sent somewhere so that 
+// anyone interested could know that something happened and could act accordingly.
+// We call this process "Dispatching an action".
 
-// To dispatch an action we need... a dispatch function.
+// To dispatch an action we need... a dispatch function ("Captain obvious"). 
 // And to let anyone interested know that an action happened, we need a mechanism to register
-// subscribers
+// subscribers.
 
-// So far here is the flow of our application
+// So far here is the flow of our application:
 // ActionCreator -> Action
 
 // Go to next tutorial: simple-subscriber.js

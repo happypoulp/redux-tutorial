@@ -21,7 +21,7 @@ It is required for you to know a bit of ES6 to understand correctly some of the 
 
 This tutorial is splitted in js file to be read as is and they are numbered in the preferred order of browsing.
 
-Start with the first tutorial: [Simple action creator](1_simple-action-creator.js)
+Start with the first tutorial: [Introduction](0_introduction.js)
 
 ### Run an example
 
