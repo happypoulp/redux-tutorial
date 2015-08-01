@@ -1,7 +1,7 @@
 redux-tutorial
 =========================
 
-This repository contains a step by step tutorial to get a grasp about flux and most particulary about [Redux](https://github.com/gaearon/redux).
+This repository contains a step by step tutorial to get a grasp about flux and most particularly about [Redux](https://github.com/gaearon/redux).
 
 **This is still a WIP.**
 
@@ -19,7 +19,7 @@ It is required for you to know a bit of ES6 to understand correctly some of the 
 
 ### Browse the tutorial
 
-This tutorial is splitted in js file to be read as is and they are numbered in the preferred order of browsing.
+This tutorial is split into js file to be read as is and they are numbered in the preferred order of browsing.
 
 Start with the first tutorial: [Introduction](0_introduction.js)
 
