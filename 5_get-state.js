@@ -57,7 +57,7 @@ var store_2 = createStore(reducer_2)
 console.log('store_2 state after initialization:', store_2.getState())
 // Output: redux state after initialization: {}
 
-// You've probably notice that since we've used the default parameter on state parameter of reducer_2,
+// You've probably noticed that since we've used the default parameter on state parameter of reducer_2,
 // we no longer get undefined as state's value in our reducer's body.
 
 // Let's now recall that a reducer is only called in response to an action dispatched and

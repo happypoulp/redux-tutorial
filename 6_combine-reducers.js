@@ -69,15 +69,15 @@ var itemsReducer = function (state = [], action) {
     }
 }
 
-// With this new multiple reducer approach and when using combineReducers,
-// each reducer will only handle a slice of our application state.
+// With this new multiple reducer approach, we will end up having each reducer to only handle 
+// a slice of our application state.
 
-// We need now a single reducer function to pass it to createStore.
+// But as we already know, just one single reducer function is expected by createStore.
 
-// How do we combine our reducers? and how do we tell redux that each reducer will only handle
+// So how do we combine our reducers? and how do we tell redux that each reducer will only handle
 // a slice of our state?
 // It's fairly simple. We use redux combineReducers function helper. combineReducers take a hash and
-// return a function that when called, will call all our reducers, retrieve the state new slice and
+// return a function that when invoked, will call all our reducers, retrieve the state new slice and
 // reunite them in a state object (a simple hash {}) that redux is holding.
 // Long story short, here is how you create a redux instance with multiple reducers:
 
@@ -98,10 +98,10 @@ var store_0 = createStore(reducer)
 // itemsReducer was called with state [] and action { type: '@@redux/INIT' }
 
 // As you can see in the output, each reducer is correctly called with the init action @@redux/INIT.
-// But what is this other action that is recieved? This is samity check implemented in combineReducers
-// to check that a reducer will always return a state != 'undefined'.
+// But what is this other action that is recieved? This is a sanity check implemented in combineReducers
+// to assure that a reducer will always return a state != 'undefined'.
 // Please note also that the first invocation of init actions in combineReducers share the same purpose
-// as random actions (do a sanity check).
+// as random actions (to do a sanity check).
 
 console.log('store_0 state after initialization:', store_0.getState())
 // Output:
