@@ -93,6 +93,6 @@ console.log('store_0 state after action SET_NAME:', store_0.getState())
 // the action? We'll talk about that in the next tutorial "dispatch-async-action.js"
 
 // So far here is the flow of our application
-// ActionCreator -> Action -> reducer
+// ActionCreator -> Action -> dispatcher -> reducer
 
 // Go to next tutorial: dispatch-async-action.js
