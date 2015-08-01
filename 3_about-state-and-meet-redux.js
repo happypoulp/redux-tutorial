@@ -16,8 +16,8 @@
 // redux vocabulary (flux vocabulary too for some of them):
 
 // Where do I keep all the data regarding my application along its lifetime?
-//     You keep it the way you want (JS object, array, Immutable structure, ...)
-//     data of your application will be called state. Makes sense since we talking about
+//     You keep it the way you want (JS object, array, Immutable structure, ...).
+//     Data of your application will be called state. Makes sense since we're talking about
 //     all the application's data that will evolve over time, it's really the application's state.
 //     But you hand it over to Redux (Redux is "state container", remember?).
 // How do I handle modification of such data?
