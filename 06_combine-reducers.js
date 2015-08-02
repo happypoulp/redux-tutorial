@@ -45,7 +45,7 @@ var reducer_1 = function (state = {}, action) {
 // It become quite evident that a single reducer function cannot hold all our
 // application's actions handling (well it could hold it, but it wouldn't be very maintainable...).
 
-// Luckily for us, redux doesn't care if we have one reducer or a dozen and it will even help us to
+// Luckily for us, Redux doesn't care if we have one reducer or a dozen and it will even help us to
 // combine them if we have many!
 
 // Let's declare 2 reducers
@@ -74,12 +74,12 @@ var itemsReducer = function (state = [], action) {
 
 // But as we already know, just one single reducer function is expected by createStore.
 
-// So how do we combine our reducers? and how do we tell redux that each reducer will only handle
+// So how do we combine our reducers? and how do we tell Redux that each reducer will only handle
 // a slice of our state?
-// It's fairly simple. We use redux combineReducers function helper. combineReducers take a hash and
+// It's fairly simple. We use Redux combineReducers function helper. combineReducers take a hash and
 // return a function that when invoked, will call all our reducers, retrieve the state new slice and
-// reunite them in a state object (a simple hash {}) that redux is holding.
-// Long story short, here is how you create a redux instance with multiple reducers:
+// reunite them in a state object (a simple hash {}) that Redux is holding.
+// Long story short, here is how you create a Redux instance with multiple reducers:
 
 import { createStore, combineReducers } from 'redux'
 
@@ -107,7 +107,7 @@ console.log('store_0 state after initialization:', store_0.getState())
 // Output:
 // store_0 state after initialization: { user: {}, items: [] }
 
-// It's interesting to note that accordingly to how redux was supposed to handle our slices,
+// It's interesting to note that accordingly to how Redux was supposed to handle our slices,
 // the final state is indeed a simple hash made of the userReducer's slice and the itemsReducer's slice:
 // {
 //     user: {}, // {} is the slice returned by our userReducer
@@ -115,6 +115,6 @@ console.log('store_0 state after initialization:', store_0.getState())
 // }
 
 // We have by now a good idea of how reducers will work. It would be nice to have some
-// actions being dispatched and see the impact on our redux state.
+// actions being dispatched and see the impact on our Redux state.
 
 // Go to next tutorial: dispatch-action.js

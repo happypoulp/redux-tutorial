@@ -13,7 +13,7 @@
 // Redux (https://github.com/gaearon/redux) is a "predictable state container for JavaScript apps"
 
 // Let's take again those questions above and reply to them with 
-// redux vocabulary (flux vocabulary too for some of them):
+// Redux vocabulary (flux vocabulary too for some of them):
 
 // Where do I keep all the data regarding my application along its lifetime?
 //     You keep it the way you want (JS object, array, Immutable structure, ...).
@@ -34,7 +34,7 @@
 //     2) a mechanism to subscribe to state updates
 //     3) a mechanism to dispatch actions to modifiers or your application state AKA reducers
 
-// The redux instance is called a store and can be created like this:
+// The Redux instance is called a store and can be created like this:
 /*
     import { createStore } from 'redux'
     var store = createStore()

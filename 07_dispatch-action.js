@@ -46,8 +46,8 @@ console.log('store_0 state after initialization:', store_0.getState())
 // Let's dispatch our first action... Remember in 'simple-action-creator.js' we said:
 //     "To dispatch an action we need... a dispatch function." Captain obvious
 
-// The dispatch function we're looking for is provided by redux and will propagate our action
-// to all of our reducers! The dispatch function is accessible through redux 
+// The dispatch function we're looking for is provided by Redux and will propagate our action
+// to all of our reducers! The dispatch function is accessible through Redux 
 // instance "dispatch" property
 
 // To dispatch an action, simply call:
@@ -95,4 +95,4 @@ console.log('store_0 state after action SET_NAME:', store_0.getState())
 // So far here is the flow of our application
 // ActionCreator -> Action -> dispatcher -> reducer
 
-// Go to next tutorial: dispatch-async-action.js
+// Go to next tutorial: dispatch-async-action-1.js
