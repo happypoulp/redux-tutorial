@@ -22,7 +22,7 @@ console.log('store_0 state after initialization:', store_0.getState())
 //     "A reducer is just a function that receives the current state of your application, the action,
 //     and returns a new state modified (or reduced as they call it)"
 // Our reducer is not returning anything right now so the state of our application is what
-// reducer() return, hence "undefined".
+// reducer() returns, hence "undefined".
 
 // Let's try to send an initial state of our application if the state given to reducer is undefined:
 
