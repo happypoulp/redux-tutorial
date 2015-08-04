@@ -9,7 +9,7 @@
 // we end up having
 // A ---> middleware 1 ---> middleware 2 ---> middleware 3 --> ... ---> B
 
-// How does a middleware could help us in Redux context? Well it seems that the function that we are
+// How could middleware help us in the Redux context? Well it seems that the function that we are
 // returning from our async action creator cannot be handled natively by Redux but if we had a 
 // middleware between our action creator and our reducers, we could transform this function into something
 // that suits Redux:
