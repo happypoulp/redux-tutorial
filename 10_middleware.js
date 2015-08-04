@@ -60,7 +60,7 @@ var thunkMiddleware = function ({ dispatch, getState }) {
 }
 
 // To tell Redux that we have one or more middlewares, we must use one of Redux
-// helper function: applyMiddleware.
+// helper functions: applyMiddleware.
 
 // "applyMiddleware" takes all your middlewares as parameters and returns a function to be called
 // with Redux createStore. When this last function will be invoked, it will produce "a higher-order 
