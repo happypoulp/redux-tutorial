@@ -6,7 +6,7 @@
 // A word about reducer VS store:
 // As you may have noticed, in the flux diagram shown in the introduction, we had "Store", not
 // "Reducer" like Redux is expecting. So how exactly do Store and Reducer differs?
-// It's more simple than you could imagine: A Store keeps your data in him while a Reducer don't.
+// It's more simple than you could imagine: A Store keeps your data in him while a Reducer doesn't.
 // So in traditional flux, stores hold state in them while in Redux, each time a reducer is
 // called, it is passed the state that needs to be updated. This way, Redux's stores became
 // "stateless stores" and were renamed reducers.
