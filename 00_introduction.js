@@ -54,7 +54,7 @@
 //   "action creators" -> action -> dispatcher -> callback
 // - View look like React view (or anything else as far as Flux is concerned)
 
-// So is flux just a matter of new vocabulary? Not exactly. But vocabulary DO matters, because by introducing 
+// So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing 
 // these new terms we are now able to express more precisely things that were regrouped under 
 // various terminologies... For example, isn't a data fetch an action? just as a click is also an action?
 // and a change in an input is an action too... Then we are all already used to issue action from our
