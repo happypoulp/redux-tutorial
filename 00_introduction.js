@@ -44,7 +44,7 @@
 // Let's pretend we're building a web application. What are all web applications made of?
 // 1) templates / html = View
 // 2) data that will populate our views = Models
-// 3) Logic to retreive data, glue all views together and to react accordingly to user events,
+// 3) Logic to retrieve data, glue all views together and to react accordingly to user events,
 //    data modifications, etc. = Controller
 
 // This is the very classic MVC that we all know about. But it actually look like concepts of flux,
