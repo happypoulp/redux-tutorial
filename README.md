@@ -29,6 +29,6 @@ Start with the first tutorial: [Introduction](00_introduction.js)
 
 Being real js files, each example can be run to verify that it works as intended or to do your own experiments:
 
-`npm run example 1_simple-action-creator.js`
+`npm run example 01_simple-action-creator.js`
 
 Enjoy!
