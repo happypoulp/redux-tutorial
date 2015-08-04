@@ -1,6 +1,6 @@
 // Tutorial 8 - dispatch-async-action-1.js
 
-// We saw previously how we could dispatch actions and how thoses actions will modify
+// We saw previously how we could dispatch actions and how those actions will modify
 // the state of our application thanks to reducers.
 
 // But so far we've only considered synchronous actions, or more exactly actions creators
