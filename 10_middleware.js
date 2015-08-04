@@ -63,7 +63,7 @@ var thunkMiddleware = function ({ dispatch, getState }) {
 // helper function: applyMiddleware.
 
 // "applyMiddleware" takes all your middlewares as parameters and returns a function to be called
-// with Redux createStore. When this last function will be invoked, it will produce "a higher-order 
+// with Redux createStore. When this last function is invoked, it will produce "a higher-order 
 // store that applies middleware to a store's dispatch".
 // (from https://github.com/gaearon/redux/blob/v1.0.0-rc/src/utils/applyMiddleware.js)
 
