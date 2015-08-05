@@ -7,13 +7,13 @@
 // that produce an action synchronously: when called, an action is returned immediately.
 
 // Let's now imagine a simple asynchronous use-case:
-// 1) user click on button "Say Hi in 2 second"
-// 2) When button "A" is clicked, we'd like to show message "Hi" after 2 second elapsed
+// 1) user clicks on button "Say Hi in 2 second"
+// 2) When button "A" is clicked, we'd like to show message "Hi" after 2 seconds have elapsed
 // 3) 2 seconds later, our view is updated with the message "Hi"
 
 // Of course this message is part of our application state so we have to save it
-// in Redux store. But what we want, is to have our store to save the message
-// only 2 second after the action creator is called.
+// in Redux store. But what we want is to have our store save the message
+// only 2 seconds after the action creator is called.
 
 // And if we were to call an action creator like we did until now...
 
