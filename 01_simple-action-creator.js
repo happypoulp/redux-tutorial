@@ -17,7 +17,7 @@ var actionCreator = function() {
 
 // However one thing to note is the format of the action. This is kind of a convention in flux
 // that the action is an object that contains a "type" property. This type allow for further
-// handling of the action. Of course, the action can also contain other property to 
+// handling of the action. Of course, the action can also contain other properties to 
 // pass any data you want.
 
 // We also see later that the action creator can actually return something else than an action,
