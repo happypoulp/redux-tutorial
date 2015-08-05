@@ -59,7 +59,7 @@ store_0.dispatch({
 // userReducer was called with state {} and action { type: 'AN_ACTION' }
 // itemsReducer was called with state [] and action { type: 'AN_ACTION' }
 
-// Each reducer is effectively called but since none of our reducer cares about this action type,
+// Each reducer is effectively called but since none of our reducers care about this action type,
 // the state is left unchanged:
 
 console.log('store_0 state after action AN_ACTION:', store_0.getState())
