@@ -59,7 +59,7 @@ var thunkMiddleware = function ({ dispatch, getState }) {
     }
 }
 
-// To tell Redux that we have one or more middlewares, we must use one of Redux
+// To tell Redux that we have one or more middlewares, we must use one of Redux's
 // helper function: applyMiddleware.
 
 // "applyMiddleware" takes all your middlewares as parameters and returns a function to be called
