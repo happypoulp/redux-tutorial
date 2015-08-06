@@ -64,7 +64,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // Theorically speaking we could stop here. Our Flux loop is closed, we understood all concept that makes
 // Flux and we saw that it is not that much of a mystery. But to be honest, there is still a lot to talk 
-// about and few things in the example were intentionally left aside to keep the most simplest form of this
+// about and few things in the last example were intentionally left aside to keep the most simplest form of this
 // last Flux's concept:
 
 // - Our subscriber callback did not received the state as parameter, why?
@@ -74,8 +74,31 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // - How do we unsubscribe from store updates?
 // - More generally speaking, how should we integrate Redux with React?
 
-// TODO
+// We're now entering a more "Redux inside React" specific domain.
 
+// It is very important to understand that Redux is by no mean bound to React. It is really a 
+// "Predictable state container for JavaScript apps" and you can use it in many ways, a React 
+// application just being one of them.
 
+// In that perspective we would be a bit lost if it weren't for react-redux (https://github.com/gaearon/react-redux).
+// Previously integrated inside Redux (before 1.0.0), this repository holds all the bindings we need to simplify
+// our life when using Redux inside React.
 
-// Go to next tutorial: .js
+// Back to our "subscribe" case... Why exactly do we have this subscribe function that seems so simple but in 
+// the same time also seems to not provide enough features?
+
+// It's simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
+//  highly extensible and this allow to build some crazy product like the Redux DevTools 
+// (https://github.com/gaearon/redux-devtools).
+
+// But in the end we still need a "better" API to subscribe to our store change. That's exactly what redux-react
+// brings us: an API that will allow us to seamlessly fill the gap between the raw Redux subscribing mechanism
+// and our developer expectations. In the end, you won't need to use "subscribe" directly. Instead you will
+// use bindings such as "provide" or "connect" and those will hide from you the "subscribe" method.
+
+// So yeah, the "subscribe" method will still be used but it will done through a higher order API that 
+// handle for you the access to redux state.
+
+// We'll now cover those bindings and show how simple it is to wire your components to Redux's state.
+
+// Go to next tutorial: provide-and-connect.js

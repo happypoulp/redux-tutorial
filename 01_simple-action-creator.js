@@ -20,7 +20,7 @@ var actionCreator = function() {
 // handling of the action. Of course, the action can also contain other properties to 
 // pass any data you want.
 
-// We also see later that the action creator can actually return something else than an action,
+// We'll also see later that the action creator can actually return something else than an action,
 // like a function. This will be extremely useful for async action handling (more on that 
 // in dispatch-async-action.js). 
 

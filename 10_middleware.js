@@ -155,7 +155,7 @@ function discardMiddleware ({ dispatch, getState }) {
 // Let's sum up what we've learned to far:
 // 1) We know how to write actions and action creators
 // 2) We know how to dispatch our actions
-// 3) We know handle custom actions like asynchronous actions thanks to middlewares
+// 3) We know how to handle custom actions like asynchronous actions thanks to middlewares
 
 // The only missing piece to close the loop of Flux application is to be notified about
 // state updates to be able to react to them (by re-rendering our components for example).

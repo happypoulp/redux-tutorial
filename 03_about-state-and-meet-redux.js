@@ -32,7 +32,7 @@
 // To sum up, Redux will provide you:
 //     1) a place to put your application state
 //     2) a mechanism to subscribe to state updates
-//     3) a mechanism to dispatch actions to modifiers or your application state AKA reducers
+//     3) a mechanism to dispatch actions to modifiers of your application state AKA reducers
 
 // The Redux instance is called a store and can be created like this:
 /*
