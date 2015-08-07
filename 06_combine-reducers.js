@@ -16,7 +16,7 @@ var reducer_0 = function (state = {}, action) {
     }
 }
 
-// ... but before going further, we should start wondering what our reducer will look like when 
+// ... but before going further, we should start wondering what our reducer will look like when
 // we'll have tens of actions:
 
 var reducer_1 = function (state = {}, action) {
@@ -69,7 +69,7 @@ var itemsReducer = function (state = [], action) {
     }
 }
 
-// With this new multiple reducer approach, we will end up having each reducer to only handle 
+// With this new multiple reducer approach, we will end up having each reducer to only handle
 // a slice of our application state.
 
 // But as we already know, just one single reducer function is expected by createStore.
@@ -98,7 +98,7 @@ var store_0 = createStore(reducer)
 // itemsReducer was called with state [] and action { type: '@@redux/INIT' }
 
 // As you can see in the output, each reducer is correctly called with the init action @@redux/INIT.
-// But what is this other action that is recieved? This is a sanity check implemented in combineReducers
+// But what is this other action that is received? This is a sanity check implemented in combineReducers
 // to assure that a reducer will always return a state != 'undefined'.
 // Please note also that the first invocation of init actions in combineReducers share the same purpose
 // as random actions (to do a sanity check).
