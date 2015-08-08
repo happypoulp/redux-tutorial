@@ -34,7 +34,7 @@ var store_1 = createStore(reducer)
 // Redux actually dispatch an init action ({ type: '@@redux/INIT' })
 
 // When called, a reducer is given those parameters: (state, action)
-// It's then very logical that at an application initialization the state not being yet
+// It's then very logical that at an application initialization, the state not being yet
 // initialized, is "undefined"
 
 // But then what is the state of our application after Redux sent its "init" action?

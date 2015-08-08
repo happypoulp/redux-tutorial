@@ -1,6 +1,6 @@
 // Tutorial 9 - dispatch-async-action-2.js
 
-// Let's try to run the first action creator that we wrote in dispatch-async-action-1.js.
+// Let's try to run the first async action creator that we wrote in dispatch-async-action-1.js.
 
 import { createStore, combineReducers } from 'redux'
 

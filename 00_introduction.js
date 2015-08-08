@@ -10,7 +10,7 @@
 // thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced 
 // by other framework I tried before. I feel today that Redux is a much better way to learn about flux
 // than many other framework. That's why I want now to share with everyone, and using my own words,
-// flux concepts what I am starting to grasp, focusing on the use of Redux.
+// flux concepts that I am starting to grasp, focusing on the use of Redux.
 
 // You may have seen this diagram representing the famous unidirectional data flow of a flux application:
 
