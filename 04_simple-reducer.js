@@ -31,7 +31,7 @@ var store_1 = createStore(reducer)
 
 // Did you see that? our reducer is actually called even if we didn't dispatch any action...
 // That's because to initialize the state of the application,
-// Redux actually dispatch an init action ({ type: '@@redux/INIT' })
+// Redux actually dispatches an init action ({ type: '@@redux/INIT' })
 
 // When called, a reducer is given those parameters: (state, action)
 // It's then very logical that at an application initialization, the state not being yet
