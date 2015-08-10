@@ -92,7 +92,17 @@ console.log('redux state after initialization:', store_3.getState())
 //     2) When using a switch, NEVER forget to have a "default: return state" because 
 //        if you don't, you'll end up having your reducer return undefined (hence loosing your state).
 //     3) Notice how we returned a new state made by merging current state with { message: action.value },
-//        all that thanks to this awesome es6 notation: { ...state, message: action.value }
+//        all that thanks to this awesome ES7 notation (Object Spread): { ...state, message: action.value }
+//     4) Note also that this ES7 Object Spread notation suits our example because it's doing a shallow
+//        copy of { message: action.value } over our state (meaning that first level property of state
+//        are completely overwritten - by opposition to gracefully merged - by first level property of
+//        { message: action.value }). But if we had a more complex / nested data structure, you may choose
+//        to handle your state's updates very differently:
+//        - using Immutable.js (https://facebook.github.io/immutable-js/)
+//        - using Object.assign (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+//        - using manual merge
+//        - or whatever other strategy that suits your needs and the structure of your state since
+//          Redux is absolutely NOT opiniated on this (remember, Redux is a state container).
 
 // Now that we're starting to handle actions in our reducer let's speak about having multiple reducers and
 // combining them.
