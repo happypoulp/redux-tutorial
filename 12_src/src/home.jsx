@@ -8,11 +8,11 @@
 // As we explained previously, when using the Provider component, we allow all components of our app to
 // access Redux. But this access can only be made through the undocumented feature "React's context". To
 // avoid asking you to use such "dark" React API, Redux is exposing a decorator (an ES7 feature that
-// make it possible to annotate and modify classes and properties at design time - 
+// makes it possible to annotate and modify classes and properties at design time -
 // https://github.com/wycats/javascript-decorators) that you can use on a component class.
 
-// The "connect" decorator litteraly connects your component with your Redux's store. By doing so,
-// it provides your store's dispatch function through a component's prop and  add also any 
+// The "connect" decorator literally connects your component with your Redux's store. By doing so,
+// it provides your store's dispatch function through a component's prop and also adds any
 // properties you want to expose part of your store's state.
 
 // Using @connect, you'll turn a dumb component (https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0),
@@ -20,13 +20,13 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-// We use the same ES6 import trick to get all action creators and produce a hash than we did with
+// We use the same ES6 import trick to get all action creators and produce a hash like we did with
 // our reducers. If you haven't yet, go get a look at our action creator (./actions-creator.js).
 import * as actionCreators from './action-creators'
 
-// The "connect" decorator takes as only parameter, a function that will select which slice of your
-// state you want to expose to you component. This function is logically called a "selector" and 
-// receive 2 parameters: the state of your store and the current props of your component.
+// The "connect" decorator takes as its only parameter, a function that will select which slice of your
+// state you want to expose to your component. This function is logically called a "selector" and
+// receives 2 parameters: the state of your store and the current props of your component.
 // The props of the component are provided to handle common case like extracting a slice of your
 // state depending on a prop value (Ex: state.items[props.someID]).
 @connect((state /*, props*/) => {
@@ -40,13 +40,13 @@ import * as actionCreators from './action-creators'
 })
 export default class Home extends React.Component {
   onTimeButtonClick () {
-    // This button handler is the one that will dispatch an action in response to a
+    // This button handler will dispatch an action in response to a
     // click event from a user. We use here the dispatch function provided by @connect in a prop.
     this.props.dispatch(actionCreators.getTime())
   }
   render () {
 
-    // Thanks to our @connect decorator, we're able to get through props, data previously selected.
+    // Thanks to our @connect decorator, we're able to get the data previously selected through the props.
     var { frozen, time, reduxState } = this.props
     var attrs = {}
 

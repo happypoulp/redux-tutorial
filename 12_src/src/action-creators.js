@@ -4,7 +4,7 @@
 // use any promise lib you want.
 import Promise from 'bluebird'
 
-// Our action creator just get the current time in a delayd fashion to illustrate the use of the promise
+// Our action creator just gets the current time in a delayed fashion to illustrate the use of the promise
 // middleware.
 
 // The promise middleware works by waiting either:
@@ -16,7 +16,7 @@ import Promise from 'bluebird'
 //      }
 //    }
 // 2) or anything else what would be passed to the next middleware or to Redux (actually, with this
-//    implementation of the promise middleware, the "anything else" have to NOT contain a promise 
+//    implementation of the promise middleware, the "anything else" has to NOT contain a promise
 //    property to be passed to the next middleware or Redux)
 
 // When the promise middleware receives this action, it will create 2 actions from this one:
@@ -25,8 +25,8 @@ import Promise from 'bluebird'
 // Again, the code for the promise middleware is not complicated and it is worth having a look
 // at it (./promise-middleware.js)
 
-// The action is delayed by "delay" ms passed as a parameter of the action creator. Try to change 
-// this value to verify that the delay correctly impact our UI.
+// The action is delayed by "delay" ms passed as a parameter of the action creator. Try to change
+// this value to verify that the delay correctly impacts our UI.
 export function getTime(delay = 100) {
   return {
     types: ['GET_TIME_REQUEST', 'GET_TIME_SUCCESS', 'GET_TIME_FAILURE'],
