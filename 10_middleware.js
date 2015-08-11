@@ -126,7 +126,7 @@ store_0.dispatch(asyncSayActionCreator_1('Hi'))
 function logMiddleware ({ dispatch, getState }) {
     return function(next) {
         return function (action) {
-            console.log('logMiddleware action recieved:', action)
+            console.log('logMiddleware action received:', action)
             return next(action)
         }
     }
@@ -138,7 +138,7 @@ function logMiddleware ({ dispatch, getState }) {
 function discardMiddleware ({ dispatch, getState }) {
     return function(next) {
         return function (action) {
-            console.log('discardMiddleware action recieved:', action)
+            console.log('discardMiddleware action received:', action)
         }
     }
 }
