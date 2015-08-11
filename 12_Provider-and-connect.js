@@ -13,9 +13,9 @@
 // - The awesome Webpack (http://webpack.github.io/) to bundle our application,
 // - The magic Webpack Dev Server (http://webpack.github.io/docs/webpack-dev-server.html)
 //     to serve JS files from a dedicated node server that allows for files watch
-// - The incredible React Hot Loader http://gaearon.github.io/react-hot-loader/ (another awesome 
-//     project of Dan Abramov - just in case, he is Redux's author) to have a crazy 
-//     DX (Developer experience) by having our components to live-reload in browser
+// - The incredible React Hot Loader http://gaearon.github.io/react-hot-loader/ (another awesome
+//     project of Dan Abramov - just in case, he is Redux's author) to have a crazy
+//     DX (Developer experience) by having our components live-reload in the browser
 //     while we're tweaking them in our code editor.
 
 // I won't detail Webpack Dev Server and React Hot Loader setup here since it's done pretty

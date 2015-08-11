@@ -1,6 +1,6 @@
 // Tutorial 11 - state-subscriber.js
 
-// We're close to have a complete Flux loop but we still miss one critical part:
+// We're close to having a complete Flux loop but we still miss one critical part:
 
 //  _________      _________       ___________  
 // |         |    | Change  |     |   React   |
@@ -62,12 +62,12 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // Our subscribe callback is correctly called and our store now contains the new item that we added.
 
-// Theorically speaking we could stop here. Our Flux loop is closed, we understood all concept that makes
-// Flux and we saw that it is not that much of a mystery. But to be honest, there is still a lot to talk 
-// about and few things in the last example were intentionally left aside to keep the most simplest form of this
+// Theorically speaking we could stop here. Our Flux loop is closed, we understood all concepts that make
+// Flux and we saw that it is not that much of a mystery. But to be honest, there is still a lot to talk
+// about and a few things in the last example were intentionally left aside to keep the simplest form of this
 // last Flux's concept:
 
-// - Our subscriber callback did not received the state as parameter, why?
+// - Our subscriber callback did not receive the state as a parameter, why?
 // - Since we did not received our new state, we were bound to exploit our closured store (store_0) so this
 //     solution is not acceptable in a real multi-modules application...
 // - How do we actually update our views?
@@ -76,8 +76,8 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // We're now entering a more "Redux inside React" specific domain.
 
-// It is very important to understand that Redux is by no mean bound to React. It is really a 
-// "Predictable state container for JavaScript apps" and you can use it in many ways, a React 
+// It is very important to understand that Redux is by no means bound to React. It is really a
+// "Predictable state container for JavaScript apps" and you can use it in many ways, a React
 // application just being one of them.
 
 // In that perspective we would be a bit lost if it weren't for react-redux (https://github.com/gaearon/react-redux).
@@ -88,16 +88,16 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // the same time also seems to not provide enough features?
 
 // It's simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
-//  highly extensible and this allow to build some crazy product like the Redux DevTools 
+//  highly extensible and this allow to build some crazy products like the Redux DevTools
 // (https://github.com/gaearon/redux-devtools).
 
-// But in the end we still need a "better" API to subscribe to our store change. That's exactly what redux-react
+// But in the end we still need a "better" API to subscribe to our store changes. That's exactly what redux-react
 // brings us: an API that will allow us to seamlessly fill the gap between the raw Redux subscribing mechanism
 // and our developer expectations. In the end, you won't need to use "subscribe" directly. Instead you will
 // use bindings such as "provide" or "connect" and those will hide from you the "subscribe" method.
 
-// So yeah, the "subscribe" method will still be used but it will done through a higher order API that 
-// handle for you the access to redux state.
+// So yeah, the "subscribe" method will still be used but it will be done through a higher order API that
+// handles access to redux state for you.
 
 // We'll now cover those bindings and show how simple it is to wire your components to Redux's state.
 
