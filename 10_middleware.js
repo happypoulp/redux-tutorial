@@ -33,7 +33,7 @@
     }
 */
 
-// As you can see above, a middleware in made of 3 nested functions (that will get called sequentially):
+// As you can see above, a middleware is made of 3 nested functions (that will get called sequentially):
 // 1) The first level provide the dispatch function and a getState function (if your 
 //     middleware or your action creator needs to read data from state) to the 2 other levels
 // 2) The second level provide the next function that will allow you to explicitly hand over
@@ -96,7 +96,7 @@ const store_0 = finalCreateStore(reducer)
 //     speaker was called with state {} and action { type: 'v.b.k.7.s.e.8.9.f.6.r' }
 //     speaker was called with state {} and action { type: '@@redux/INIT' }
 
-// Now that we have our middelware-ready store instance, let's try again to dispatch our async action:
+// Now that we have our middleware-ready store instance, let's try again to dispatch our async action:
 
 var asyncSayActionCreator_1 = function (message) {
     return function (dispatch) {
