@@ -20,7 +20,7 @@
     "file-loader": "^0.8.4",
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
-    "react-redux": "^0.2.2",
+    "react-redux": "^0.8.2",
     "react-router": "^1.0.0-beta3",
     "redux": "v1.0.0-rc",
     "redux-thunk": "^0.1.0",

@@ -29,7 +29,7 @@ import * as actionCreators from './action-creators'
 // receives 2 parameters: the state of your store and the current props of your component.
 // The props of the component are provided to handle common case like extracting a slice of your
 // state depending on a prop value (Ex: state.items[props.someID]).
-@connect((state /*, props*/) => {
+@connect((state) => {
     // This is our select function that will extract from the state the data slice we want to expose
     // through props to our component.
     return {
@@ -37,7 +37,9 @@ import * as actionCreators from './action-creators'
       frozen: state._time.frozen,
       time: state._time.time
     }
-})
+}
+/*, dispatch => {}
+  , props => {}*/)
 export default class Home extends React.Component {
   onTimeButtonClick () {
     // This button handler will dispatch an action in response to a
