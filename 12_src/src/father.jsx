@@ -2,10 +2,11 @@ import React from 'react'
 import Child from './child'
 import { connect } from 'react-redux'
 
-@connect(state => {
-  console.log('Father::@connect')
-  return {}
-})
+// @connect(state => {
+//   console.log('Father::@connect')
+//   return {}
+//   // return state
+// })
 export default class Father extends React.Component {
   render () {
     console.log('Father::Render', JSON.stringify(this.props, null, 2))

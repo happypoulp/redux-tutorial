@@ -16,16 +16,29 @@ var initialTimeState = {}
 export function _time(state = initialTimeState, action) {
   switch (action.type) {
     case 'GET_TIME_REQUEST':
-      return {
-        ...state,
-        frozen: true
-      }
+      console.log('_time reducer', 'GET_TIME_REQUEST')
+      // GOOD
+      // return {
+      //   ...state,
+      //   frozen: true
+      // }
+
+      // !!WRONG!!
+      state.frozen = true
+      return state
     case 'GET_TIME_SUCCESS':
-      return {
-        ...state,
-        time: action.result.time,
-        frozen: false
-      }
+      console.log('_time reducer', 'GET_TIME_SUCCESS')
+      // GOOD
+      // return {
+      //   ...state,
+      //   time: action.result.time,
+      //   frozen: false
+      // }
+
+      // !!WRONG!!
+      state.frozen = false
+      state.time = action.result.time
+      return state
     case 'GET_TIME_FAILURE':
       // we could add an error message here, to be printed somewhere in our application
       return {

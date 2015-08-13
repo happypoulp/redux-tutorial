@@ -30,10 +30,11 @@ import * as actionCreators from './action-creators'
 // receive 2 parameters: the state of your store and the current props of your component.
 // The props of the component are provided to handle common case like extracting a slice of your
 // state depending on a prop value (Ex: state.items[props.someID]).
-@connect((state /*, props*/) => {
+@connect((state) => {
   console.log('Home::@connect')
   // This is our select function that will extract from the state the data slice we want to expose
   // through props to our component.
+  // return state
   return {
     reduxState: state,
     frozen: state._time.frozen,
@@ -52,6 +53,7 @@ export default class Home extends React.Component {
 
   // Thanks to our @connect decorator, we're able to get through props, data previously selected.
   var { frozen, time, reduxState } = this.props
+  // var { frozen, time, reduxState } = this.props._time
   var attrs = {}
 
   if (frozen) {
