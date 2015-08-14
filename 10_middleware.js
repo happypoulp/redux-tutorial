@@ -152,7 +152,7 @@ function discardMiddleware ({ dispatch, getState }) {
 // See http://gaearon.github.io/redux/docs/introduction/Ecosystem.html, section Middlewares, to 
 // see other middleware examples.
 
-// Let's sum up what we've learned to far:
+// Let's sum up what we've learned so far:
 // 1) We know how to write actions and action creators
 // 2) We know how to dispatch our actions
 // 3) We know how to handle custom actions like asynchronous actions thanks to middlewares
