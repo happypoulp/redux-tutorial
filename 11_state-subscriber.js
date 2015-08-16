@@ -91,7 +91,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 //  highly extensible and this allow to build some crazy products like the Redux DevTools
 // (https://github.com/gaearon/redux-devtools).
 
-// But in the end we still need a "better" API to subscribe to our store changes. That's exactly what redux-react
+// But in the end we still need a "better" API to subscribe to our store changes. That's exactly what react-redux
 // brings us: an API that will allow us to seamlessly fill the gap between the raw Redux subscribing mechanism
 // and our developer expectations. In the end, you won't need to use "subscribe" directly. Instead you will
 // use bindings such as "provide" or "connect" and those will hide from you the "subscribe" method.
