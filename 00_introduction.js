@@ -74,7 +74,7 @@
 // very quickly. This is because every View can watch every Model and every Model can watch other Models so 
 // basically data can arrive from a lot of places and be changed by a lot of sources (any views or any models).
 
-//  Whereas when using Flux and its unidirectional data flow. The example above could become:
+//  Whereas when using Flux and its unidirectional data flow the example above could become:
 // 1) user click on button "A"
 // 2) a handler on button "A" triggers an action that is dispatched and produces a change on store "A"
 // 3) since all other stores are also notified about the action, Store B can react to the same action too
