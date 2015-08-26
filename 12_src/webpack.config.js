@@ -1,7 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 
-var webpackDevHost = 'localhost'
+var webpackDevHost = 'localhost';
 
 module.exports = function (webpackDevPort) {
   return {
@@ -31,4 +31,4 @@ module.exports = function (webpackDevPort) {
       }]
     }
   }
-}
+};

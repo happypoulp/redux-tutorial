@@ -42,10 +42,10 @@ var server = http.createServer(function(req, res) {
         <script type="text/javascript" src="http://localhost:5051/static/bundle.js"></script>
       </body>
     </html>`
-  )
+  );
 
   res.end()
-})
+});
 
 export default server
 

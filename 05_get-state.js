@@ -5,15 +5,15 @@
 import { createStore } from 'redux'
 
 var reducer_0 = function (state, action) {
-    console.log('reducer_0 was called with state', state, 'and action', action)
-}
+    console.log('reducer_0 was called with state', state, 'and action', action);
+};
 
 var store_0 = createStore(reducer_0)
 // Output: reducer_0 was called with state undefined and action { type: '@@redux/INIT' }
 
 // To get the state that Redux is holding for us, you call getState
 
-console.log('store_0 state after initialization:', store_0.getState())
+console.log('store_0 state after initialization:', store_0.getState());
 // Output: Redux state after initialization: undefined
 
 // So the state of our application is still undefined after the initialization? Well of course it is,
@@ -27,18 +27,18 @@ console.log('store_0 state after initialization:', store_0.getState())
 // Let's try to send an initial state of our application if the state given to reducer is undefined:
 
 var reducer_1 = function (state, action) {
-    console.log('reducer_1 was called with state', state, 'and action', action)
+    console.log('reducer_1 was called with state', state, 'and action', action);
     if (typeof state === 'undefined') {
         return {}
     }
 
     return state;
-}
+};
 
-var store_1 = createStore(reducer_1)
+var store_1 = createStore(reducer_1);
 // Output: reducer_1 was called with state undefined and action { type: '@@redux/INIT' }
 
-console.log('store_1 state after initialization:', store_1.getState())
+console.log('store_1 state after initialization:', store_1.getState());
 // Output: Redux state after initialization: {}
 
 // As expected, the state returned by Redux after initialization is now {}
@@ -46,15 +46,15 @@ console.log('store_1 state after initialization:', store_1.getState())
 // There is however a much cleaner way to implement this pattern thanks to ES6:
 
 var reducer_2 = function (state = {}, action) {
-    console.log('reducer_2 was called with state', state, 'and action', action)
+    console.log('reducer_2 was called with state', state, 'and action', action);
 
     return state;
-}
+};
 
-var store_2 = createStore(reducer_2)
+var store_2 = createStore(reducer_2);
 // Output: reducer_2 was called with state {} and action { type: '@@redux/INIT' }
 
-console.log('store_2 state after initialization:', store_2.getState())
+console.log('store_2 state after initialization:', store_2.getState());
 // Output: Redux state after initialization: {}
 
 // You've probably noticed that since we've used the default parameter on state parameter of reducer_2,
@@ -64,23 +64,23 @@ console.log('store_2 state after initialization:', store_2.getState())
 // let's fake a state modification in response to an action type 'SAY_SOMETHING'
 
 var reducer_3 = function (state = {}, action) {
-    console.log('reducer_3 was called with state', state, 'and action', action)
+    console.log('reducer_3 was called with state', state, 'and action', action);
 
     switch (action.type) {
         case 'SAY_SOMETHING':
             return {
                 ...state,
                 message: action.value
-            }
+            };
         default:
             return state;
     }
-}
+};
 
-var store_3 = createStore(reducer_3)
+var store_3 = createStore(reducer_3);
 // Output: reducer_3 was called with state {} and action { type: '@@redux/INIT' }
 
-console.log('redux state after initialization:', store_3.getState())
+console.log('redux state after initialization:', store_3.getState());
 // Output: Redux state after initialization: {}
 
 // Nothing new in our state so far since we did not dispatch any action yet. But there are few 
@@ -102,7 +102,7 @@ console.log('redux state after initialization:', store_3.getState())
 //        - using Object.assign (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 //        - using manual merge
 //        - or whatever other strategy that suits your needs and the structure of your state since
-//          Redux is absolutely NOT opiniated on this (remember, Redux is a state container).
+//          Redux is absolutely NOT opinionated on this (remember, Redux is a state container).
 
 // Now that we're starting to handle actions in our reducer let's speak about having multiple reducers and
 // combining them.

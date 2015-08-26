@@ -1,12 +1,12 @@
-var webpack = require('webpack')
-var WebpackDevServer = require('webpack-dev-server')
-var getConfig = require('../webpack.config')
+var webpack = require('webpack');
+var WebpackDevServer = require('webpack-dev-server');
+var getConfig = require('../webpack.config');
 
-const webpackDevHost = 'localhost'
+const webpackDevHost = 'localhost';
 
 export default {
   listen: (serverPort) => {
-    const webpackDevPort = serverPort + 1
+    const webpackDevPort = serverPort + 1;
     const config = getConfig(webpackDevPort);
 
     const webpackDevServer = new WebpackDevServer(
@@ -16,7 +16,7 @@ export default {
         hot: true,
         historyApiFallback: true
       }
-    )
+    );
 
     webpackDevServer.listen(
       webpackDevPort,

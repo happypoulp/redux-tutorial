@@ -15,17 +15,17 @@
 
 import { createStore } from 'redux'
 
-var store_0 = createStore(() => {})
+var store_0 = createStore(() => {});
 
 // ... so that Redux can call this function on your application state each time an action occurs.
 
 // Let's put some log in our reducer
 
 var reducer = function (...args) {
-    console.log('Reducer was called with args', args)
-}
+    console.log('Reducer was called with args', args);
+};
 
-var store_1 = createStore(reducer)
+var store_1 = createStore(reducer);
 
 // Output: Reducer was called with args [ undefined, { type: '@@redux/INIT' } ]
 
