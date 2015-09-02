@@ -47,41 +47,41 @@
 // 3) Logic to retrieve data, glue all views together and to react accordingly to user events,
 //    data modifications, etc. = Controller
 
-// This is the very classic MVC that we all know about. But it actually look like concepts of flux,
+// This is the very classic MVC that we all know about. But it actually looks like concepts of flux,
 // just expressed in a slightly different way:
-// - Model look like store
+// - Models look like stores
 // - user events, data modifications and their handlers look like
 //   "action creators" -> action -> dispatcher -> callback
-// - View look like React view (or anything else as far as Flux is concerned)
+// - Views look like React views (or anything else as far as Flux is concerned)
 
-// So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing 
+// So is Flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing 
 // these new terms we are now able to express more precisely things that were regrouped under 
 // various terminologies... For example, isn't a data fetch an action? just as a click is also an action?
-// and a change in an input is an action too... Then we are all already used to issue action from our
+// and a change in an input is an action too... Then, we are all already used to issuing actions from our
 // applications, we were just calling them differently. And instead of having handlers for those
-// actions modifying directly Models or Views, flux ensure all actions go first through something called
-// a dispatcher, then through our stores and finally all watchers of stores are notified.
+// actions directly modify Models or Views, Flux ensures all actions go first through something called
+// a dispatcher, then through our stores, and finally all watchers of stores are notified.
 
 // To get more clearly how MVC and Flux differs, we'll
 // take a classic use-case in an MVC application:
 // In a classic MVC application you could easily end up with:
-// 1) user click on button "A"
-// 2) a click handler on button "A" trigger a change on Model "A"
-// 3) a change handler on Model "A" trigger a change on Model "B"
-// 4) a change handler on Model "B" trigger a change on  view "B" that re-render itself
+// 1) user clicks on button "A"
+// 2) a click handler on button "A" triggers a change on Model "A"
+// 3) a change handler on Model "A" triggers a change on Model "B"
+// 4) a change handler on Model "B" triggers a change on  View "B" that re-renders itself
 
-// Finding the source of a bug in such an environment when something goes wrong can become quite a challenge
-// very quickly. This is because every View can watch every Model and every Model can watch other Models so 
+// Finding the source of a bug in such an environment when something goes wrong can become quite challenging
+// very quickly. This is because every View can watch every Model, and every Model can watch other Models, so 
 // basically data can arrive from a lot of places and be changed by a lot of sources (any views or any models).
 
-//  Whereas when using Flux and its unidirectional data flow the example above could become:
-// 1) user click on button "A"
-// 2) a handler on button "A" trigger an action that is dispatched and produce a change on store "A"
-// 3) since all others stores are also notified about the action, Store B can react to the same action too
-// 4) View "B" get notified by change in store A and B and re-render
+//  Whereas when using Flux and its unidirectional data flow, the example above could become:
+// 1) user clicks on button "A"
+// 2) a handler on button "A" triggers an action that is dispatched and produces a change on Store "A"
+// 3) since all other stores are also notified about the action, Store B can react to the same action too
+// 4) View "B" gets notified by the change in Stores A and B, and re-renders
 
-// See how we avoid to have store A being directly linked to store B? Each store can only be 
-// modified by an action and nothing else. And once all stores replied to an action, 
+// See how we avoid to have Store A being directly linked to Store B? Each store can only be 
+// modified by an action and nothing else. And once all stores have replied to an action, 
 // views can finally update. So in the end, data always flow in one way: 
 //     action -> store -> view -> action -> store -> view -> action -> ...
 
