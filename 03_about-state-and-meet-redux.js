@@ -35,10 +35,9 @@
 //     3) a mechanism to dispatch actions to modifiers of your application state AKA reducers
 
 // The Redux instance is called a store and can be created like this:
-/*
-    import { createStore } from 'redux'
-    var store = createStore()
-*/
+
+import { createStore } from 'redux'
+var store = createStore()
 
 // but if you run the code above, you'll notice that it throw an error:
 //     Error: Invariant Violation: Expected the reducer to be a function.
@@ -48,7 +47,6 @@
 // Let's try again
 
 import { createStore } from 'redux'
-
 var store = createStore(() => {})
 
 // Seems good for now...
