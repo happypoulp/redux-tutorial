@@ -6,10 +6,10 @@
 // but I just didn't grasp concepts correctly. In the end, I was just applying documentation of different
 // flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read
 // about (actions / actions creators, store, dispatcher, etc).
-// Only when I started using Redux did I realized that flux is more simple than I thought. This is all
+// Only when I started using Redux did I realize that flux is more simple than I thought. This is all
 // thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced 
 // by other framework I tried before. I feel today that Redux is a much better way to learn about flux
-// than many other framework. That's why I want now to share with everyone, and using my own words,
+// than many other framework. That's why I want now to share with everyone, using my own words,
 // flux concepts that I am starting to grasp, focusing on the use of Redux.
 
 // You may have seen this diagram representing the famous unidirectional data flow of a flux application:
@@ -62,13 +62,13 @@
 // actions directly modify Models or Views, flux ensures all actions go first through something called
 // a dispatcher, then through our stores, and finally all watchers of stores are notified.
 
-// To get more clearly how MVC and flux differs, we'll
+// To get more clarity how MVC and flux differs, we'll
 // take a classic use-case in an MVC application:
 // In a classic MVC application you could easily end up with:
 // 1) User clicks on button "A"
 // 2) A click handler on button "A" triggers a change on Model "A"
 // 3) A change handler on Model "A" triggers a change on Model "B"
-// 4) A change handler on Model "B" triggers a change on  View "B" that re-renders itself
+// 4) A change handler on Model "B" triggers a change on View "B" that re-renders itself
 
 // Finding the source of a bug in such an environment when something goes wrong can become quite challenging
 // very quickly. This is because every View can watch every Model, and every Model can watch other Models, so 
@@ -80,9 +80,9 @@
 // 3) since all other stores are also notified about the action, Store B can react to the same action too
 // 4) View "B" gets notified by the change in Stores A and B, and re-renders
 
-// See how we avoid to have Store A being directly linked to Store B? Each store can only be 
+// See how we avoid directly linking Store A to Store B? Each store can only be 
 // modified by an action and nothing else. And once all stores have replied to an action, 
-// views can finally update. So in the end, data always flow in one way: 
+// views can finally update. So in the end, data always flows in one way: 
 //     action -> store -> view -> action -> store -> view -> action -> ...
 
 // Just as we started our use case above from an action, let's start our tutorial with
