@@ -1,6 +1,6 @@
 // Tutorial 13 - final-words.js
 
-// There is actually more in Redux and react-redux that we showed to you through this tutorial. For example,
+// There is actually more in Redux and react-redux than we showed to you through this tutorial. For example,
 // concerning Redux, you may be interested in bindActionCreators (to produce a hash of action creators
 // already bound to dispatch - http://gaearon.github.io/redux/docs/api/bindActionCreators.html).
 
