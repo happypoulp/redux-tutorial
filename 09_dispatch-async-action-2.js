@@ -6,20 +6,20 @@ import { createStore, combineReducers } from 'redux'
 
 var reducer = combineReducers({
     speaker: function (state = {}, action) {
-        console.log('speaker was called with state', state, 'and action', action)
+        console.log('speaker was called with state', state, 'and action', action);
 
         switch (action.type) {
             case 'SAY':
                 return {
                     ...state,
                     message: action.message
-                }
+                };
             default:
                 return state;
         }
     }
-})
-var store_0 = createStore(reducer)
+});
+var store_0 = createStore(reducer);
 
 var asyncSayActionCreator_1 = function (message) {
     return function (dispatch) {
@@ -30,10 +30,10 @@ var asyncSayActionCreator_1 = function (message) {
             })
         }, 2000)
     }
-}
+};
 
-console.log("\n", 'Running our async action creator:', "\n")
-store_0.dispatch(asyncSayActionCreator_1('Hi'))
+console.log("\n", 'Running our async action creator:', "\n");
+store_0.dispatch(asyncSayActionCreator_1('Hi'));
 
 // Output:
 //     ...
@@ -44,7 +44,7 @@ store_0.dispatch(asyncSayActionCreator_1('Hi'))
 //     ...
 
 // It seems that our function didn't even reach our reducers. But Redux has been kind enough to give us a
-// tips: "Use custom middleware for async actions.". It looks like we're on the right path but what is this 
+// tip: "Use custom middleware for async actions.". It looks like we're on the right path but what is this
 // "middleware" thing?
 
 // Just to reassure you, our action creator asyncSayActionCreator_1 is well-written and will work as expected

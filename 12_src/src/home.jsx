@@ -21,7 +21,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 // We use the same ES6 import trick to get all action creators and produce a hash like we did with
-// our reducers. If you haven't yet, go get a look at our action creator (./actions-creator.js).
+// our reducers. If you haven't yet, go get a look at our action creator (./actions-creators.js).
 import * as actionCreators from './action-creators'
 
 // The "connect" decorator takes as its only parameter, a function that will select which slice of your
@@ -47,8 +47,8 @@ export default class Home extends React.Component {
   render () {
 
     // Thanks to our @connect decorator, we're able to get the data previously selected through the props.
-    var { frozen, time, reduxState } = this.props
-    var attrs = {}
+    var { frozen, time, reduxState } = this.props;
+    var attrs = {};
 
     if (frozen) {
         attrs = {
@@ -74,4 +74,4 @@ export default class Home extends React.Component {
   }
 }
 
-// Go to ./final-words.jsx for our last advice about what to do now...
+// Go to ./13_final-words.jsx for our last advice about what to do now...

@@ -26,35 +26,35 @@
 import { createStore, combineReducers } from 'redux'
 
 var itemsReducer = function (state = [], action) {
-    console.log('itemsReducer was called with state', state, 'and action', action)
+    console.log('itemsReducer was called with state', state, 'and action', action);
 
     switch (action.type) {
-        case 'ADD_ITEM':
+        case 'SET_ITEM':
             return [
                 ...state,
                 action.item
-            ]
+            ];
         default:
             return state;
     }
-}
+};
 
-var reducer = combineReducers({ items: itemsReducer })
-var store_0 = createStore(reducer)
+var reducer = combineReducers({ items: itemsReducer });
+var store_0 = createStore(reducer);
 
 store_0.subscribe(function() {
     console.log('store_0 has been updated. Latest store state:', store_0.getState());
     // Update your views here
-})
+});
 
-var addItemActionCreator = function (item) {
+var setItemActionCreator = function (item) {
     return {
-        type: 'ADD_ITEM',
+        type: 'SET_ITEM',
         item: item
     }
-}
+};
 
-store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
+store_0.dispatch(setItemActionCreator({ id: 1234, description: 'anything' }));
 
 // Output:
 //     ...
@@ -62,7 +62,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // Our subscribe callback is correctly called and our store now contains the new item that we added.
 
-// Theorically speaking we could stop here. Our Flux loop is closed, we understood all concepts that make
+// Theoretically speaking we could stop here. Our Flux loop is closed, we understood all concepts that make
 // Flux and we saw that it is not that much of a mystery. But to be honest, there is still a lot to talk
 // about and a few things in the last example were intentionally left aside to keep the simplest form of this
 // last Flux's concept:

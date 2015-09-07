@@ -12,7 +12,7 @@ import Application from './application'
 // Just as we did so many times in previous examples, we need to create our redux instance. This time
 // all code for that task was moved to a specific module that returns a single function to trigger the
 // instantiation.
-const store = createStore()
+const store = createStore();
 
 // Now, time to render our application to the DOM...
 React.render(
@@ -20,6 +20,6 @@ React.render(
   // Provider can do its job.
   <Application store={store} />,
   document.getElementById('app-wrapper')
-)
+);
 
 // Go to ./create-store.js to review what you know now perfectly: "How to create a Redux store?"

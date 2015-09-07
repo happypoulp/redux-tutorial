@@ -34,8 +34,8 @@ export function getTime(delay = 100) {
       return new Promise((resolve, reject) => {
         // Just simulating an async request to a server via a setTimeout
         setTimeout(() => {
-          const d = new Date()
-          const ms = ('000' + d.getMilliseconds()).slice(-3)
+          const d = new Date();
+          const ms = ('000' + d.getMilliseconds()).slice(-3);
           resolve({
             time: `${d.toString().match(/\d{2}:\d{2}:\d{2}/)[0]}.${ms}`
           })

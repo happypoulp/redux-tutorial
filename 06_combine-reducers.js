@@ -3,31 +3,31 @@
 // We're now starting to get a grasp of what a reducer is...
 
 var reducer_0 = function (state = {}, action) {
-    console.log('reducer_0 was called with state', state, 'and action', action)
+    console.log('reducer_0 was called with state', state, 'and action', action);
 
     switch (action.type) {
         case 'SAY_SOMETHING':
             return {
                 ...state,
                 message: action.value
-            }
+            };
         default:
             return state;
     }
-}
+};
 
 // ... but before going further, we should start wondering what our reducer will look like when
 // we'll have tens of actions:
 
 var reducer_1 = function (state = {}, action) {
-    console.log('reducer_1 was called with state', state, 'and action', action)
+    console.log('reducer_1 was called with state', state, 'and action', action);
 
     switch (action.type) {
         case 'SAY_SOMETHING':
             return {
                 ...state,
                 message: action.value
-            }
+            };
         case 'DO_SOMETHING':
             // ...
         case 'LEARN_SOMETHING':
@@ -40,7 +40,7 @@ var reducer_1 = function (state = {}, action) {
         default:
             return state;
     }
-}
+};
 
 // It become quite evident that a single reducer function cannot hold all our
 // application's actions handling (well it could hold it, but it wouldn't be very maintainable...).
@@ -51,23 +51,23 @@ var reducer_1 = function (state = {}, action) {
 // Let's declare 2 reducers
 
 var userReducer = function (state = {}, action) {
-    console.log('userReducer was called with state', state, 'and action', action)
+    console.log('userReducer was called with state', state, 'and action', action);
 
     switch (action.type) {
         // etc.
         default:
             return state;
     }
-}
+};
 var itemsReducer = function (state = [], action) {
-    console.log('itemsReducer was called with state', state, 'and action', action)
+    console.log('itemsReducer was called with state', state, 'and action', action);
 
     switch (action.type) {
         // etc.
         default:
             return state;
     }
-}
+};
 
 // With this new multiple reducer approach, we will end up having each reducer to only handle
 // a slice of our application state.
@@ -86,13 +86,13 @@ import { createStore, combineReducers } from 'redux'
 var reducer = combineReducers({
     user: userReducer,
     items: itemsReducer
-})
+});
 // Output:
 // userReducer was called with state {} and action { type: '@@redux/INIT' }
 // userReducer was called with state {} and action { type: 'a.2.e.i.j.9.e.j.y.v.i' }
 // itemsReducer was called with state [] and action { type: '@@redux/INIT' }
 // itemsReducer was called with state [] and action { type: 'i.l.j.c.a.4.z.3.3.d.i' }
-var store_0 = createStore(reducer)
+var store_0 = createStore(reducer);
 // Output:
 // userReducer was called with state {} and action { type: '@@redux/INIT' }
 // itemsReducer was called with state [] and action { type: '@@redux/INIT' }
@@ -103,7 +103,7 @@ var store_0 = createStore(reducer)
 // Please note also that the first invocation of init actions in combineReducers share the same purpose
 // as random actions (to do a sanity check).
 
-console.log('store_0 state after initialization:', store_0.getState())
+console.log('store_0 state after initialization:', store_0.getState());
 // Output:
 // store_0 state after initialization: { user: {}, items: [] }
 

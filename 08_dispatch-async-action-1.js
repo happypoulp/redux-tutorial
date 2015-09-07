@@ -7,7 +7,7 @@
 // that produce an action synchronously: when called, an action is returned immediately.
 
 // Let's now imagine a simple asynchronous use-case:
-// 1) user clicks on button "Say Hi in 2 second"
+// 1) user clicks on button "Say Hi in 2 seconds"
 // 2) When button "A" is clicked, we'd like to show message "Hi" after 2 seconds have elapsed
 // 3) 2 seconds later, our view is updated with the message "Hi"
 
@@ -23,35 +23,35 @@ import { createStore, combineReducers } from 'redux'
 
 var reducer = combineReducers({
     speaker: function (state = {}, action) {
-        console.log('speaker was called with state', state, 'and action', action)
+        console.log('speaker was called with state', state, 'and action', action);
 
         switch (action.type) {
             case 'SAY':
                 return {
                     ...state,
                     message: action.message
-                }
+                };
             default:
                 return state;
         }
     }
-})
-var store_0 = createStore(reducer)
+});
+var store_0 = createStore(reducer);
 
 var sayActionCreator = function (message) {
     return {
         type: 'SAY',
         message
     }
-}
+};
 
-console.log("\n", 'Running our normal action creator:', "\n")
-
-console.log(new Date());
-store_0.dispatch(sayActionCreator('Hi'))
+console.log("\n", 'Running our normal action creator:', "\n");
 
 console.log(new Date());
-console.log('store_0 state after action SET_NAME:', store_0.getState())
+store_0.dispatch(sayActionCreator('Hi'));
+
+console.log(new Date());
+console.log('store_0 state after action SET_NAME:', store_0.getState());
 // Output (skipping initialization output):
 //     Sun Aug 02 2015 01:03:05 GMT+0200 (CEST)
 //     speaker was called with state {} and action { type: 'SAY', message: 'Hi' }
@@ -70,7 +70,7 @@ var asyncSayActionCreator_0 = function (message) {
             message
         }
     }, 2000)
-}
+};
 
 // But then our action creator would not return an action, it would return "undefined". So this is not
 // quite the solution we're looking for.
@@ -88,7 +88,7 @@ var asyncSayActionCreator_1 = function (message) {
             })
         }, 2000)
     }
-}
+};
 
 // Again you'll notice that our action creator is not returning an action, it is returning a function.
 // So there are high chances that our reducers won't know what to do with it. But we never know, so let's 

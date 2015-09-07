@@ -57,7 +57,7 @@ var thunkMiddleware = function ({ dispatch, getState }) {
                 next(action)
         }
     }
-}
+};
 
 // To tell Redux that we have one or more middlewares, we must use one of Redux's
 // helper functions: applyMiddleware.
@@ -71,26 +71,26 @@ var thunkMiddleware = function ({ dispatch, getState }) {
 
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
-const finalCreateStore = applyMiddleware(thunkMiddleware)(createStore)
+const finalCreateStore = applyMiddleware(thunkMiddleware)(createStore);
 // For multiple middlewares, write: applyMiddleware(middleware1, middleware2, ...)(createStore)
 
 var reducer = combineReducers({
     speaker: function (state = {}, action) {
-        console.log('speaker was called with state', state, 'and action', action)
+        console.log('speaker was called with state', state, 'and action', action);
 
         switch (action.type) {
             case 'SAY':
                 return {
                     ...state,
                     message: action.message
-                }
+                };
             default:
                 return state
         }
     }
-})
+});
 
-const store_0 = finalCreateStore(reducer)
+const store_0 = finalCreateStore(reducer);
 // Output:
 //     speaker was called with state {} and action { type: '@@redux/INIT' }
 //     speaker was called with state {} and action { type: 'v.b.k.7.s.e.8.9.f.6.r' }
@@ -101,18 +101,18 @@ const store_0 = finalCreateStore(reducer)
 var asyncSayActionCreator_1 = function (message) {
     return function (dispatch) {
         setTimeout(function () {
-            console.log(new Date(), 'Dispatch action now:')
+            console.log(new Date(), 'Dispatch action now:');
             dispatch({
                 type: 'SAY',
                 message
             })
         }, 2000)
     }
-}
+};
 
-console.log("\n", new Date(), 'Running our async action creator:', "\n")
+console.log("\n", new Date(), 'Running our async action creator:', "\n");
 
-store_0.dispatch(asyncSayActionCreator_1('Hi'))
+store_0.dispatch(asyncSayActionCreator_1('Hi'));
 // Output:
 //     Mon Aug 03 2015 00:01:20 GMT+0200 (CEST) Running our async action creator:
 //     Mon Aug 03 2015 00:01:22 GMT+0200 (CEST) 'Dispatch action now:'
@@ -126,7 +126,7 @@ store_0.dispatch(asyncSayActionCreator_1('Hi'))
 function logMiddleware ({ dispatch, getState }) {
     return function(next) {
         return function (action) {
-            console.log('logMiddleware action received:', action)
+            console.log('logMiddleware action received:', action);
             return next(action)
         }
     }
