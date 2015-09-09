@@ -6,13 +6,13 @@
 // One thing to notice though: we're not using the thunk middleware that we've seen before. Instead
 // we use a promise middleware solution that will allow us to handle asynchronous action creators and
 // to do some nice real time updates on our UI (could also be some optimistic updates).
-// This middleware was discussed here:  https://github.com/gaearon/redux/issues/99 and it is used
+// This middleware was discussed here: https://github.com/gaearon/redux/issues/99 and it is used
 // in this very good react-redux-universal-example: https://github.com/erikras/react-redux-universal-hot-example
 // that I strongly suggest you get a look at (later, not right now ;)).
 
 import { createStore, applyMiddleware, combineReducers } from 'redux'
-// You can go and see code for this middleware, it's not very complicated and makes a good
-// excercise to sharpen your understanding on middlewares.
+// You can go and see the code for this middleware, it's not very complicated and makes a good
+// exercise to sharpen your understanding on middlewares.
 import promiseMiddleware from './promise-middleware'
 // We'll just have one reducer in this application but the ES6 import notation below is
 // pretty interesting to import and produce a reducers hash in one go. Have a look in

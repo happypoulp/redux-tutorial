@@ -44,7 +44,7 @@ store_0.dispatch(asyncSayActionCreator_1('Hi'))
 //     ...
 
 // It seems that our function didn't even reach our reducers. But Redux has been kind enough to give us a
-// tips: "Use custom middleware for async actions.". It looks like we're on the right path but what is this 
+// tip: "Use custom middleware for async actions.". It looks like we're on the right path but what is this
 // "middleware" thing?
 
 // Just to reassure you, our action creator asyncSayActionCreator_1 is well-written and will work as expected

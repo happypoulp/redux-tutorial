@@ -62,7 +62,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // Our subscribe callback is correctly called and our store now contains the new item that we added.
 
-// Theorically speaking we could stop here. Our Flux loop is closed, we understood all concepts that make
+// Theoretically speaking we could stop here. Our Flux loop is closed, we understood all concepts that make
 // Flux and we saw that it is not that much of a mystery. But to be honest, there is still a lot to talk
 // about and a few things in the last example were intentionally left aside to keep the simplest form of this
 // last Flux's concept:
