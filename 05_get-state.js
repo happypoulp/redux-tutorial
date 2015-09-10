@@ -102,7 +102,7 @@ console.log('redux state after initialization:', store_3.getState())
 //        - using Object.assign (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 //        - using manual merge
 //        - or whatever other strategy that suits your needs and the structure of your state since
-//          Redux is absolutely NOT opiniated on this (remember, Redux is a state container).
+//          Redux is absolutely NOT opinionated on this (remember, Redux is a state container).
 
 // Now that we're starting to handle actions in our reducer let's speak about having multiple reducers and
 // combining them.

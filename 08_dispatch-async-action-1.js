@@ -7,7 +7,7 @@
 // that produce an action synchronously: when called, an action is returned immediately.
 
 // Let's now imagine a simple asynchronous use-case:
-// 1) user clicks on button "Say Hi in 2 second"
+// 1) user clicks on button "Say Hi in 2 seconds"
 // 2) When button "A" is clicked, we'd like to show message "Hi" after 2 seconds have elapsed
 // 3) 2 seconds later, our view is updated with the message "Hi"
 
