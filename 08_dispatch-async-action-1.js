@@ -51,7 +51,7 @@ console.log(new Date());
 store_0.dispatch(sayActionCreator('Hi'))
 
 console.log(new Date());
-console.log('store_0 state after action SET_NAME:', store_0.getState())
+console.log('store_0 state after action SAY:', store_0.getState())
 // Output (skipping initialization output):
 //     Sun Aug 02 2015 01:03:05 GMT+0200 (CEST)
 //     speaker was called with state {} and action { type: 'SAY', message: 'Hi' }
