@@ -14,7 +14,7 @@ var store_0 = createStore(reducer_0)
 // To get the state that Redux is holding for us, you call getState
 
 console.log('store_0 state after initialization:', store_0.getState())
-// Output: Redux state after initialization: undefined
+// Output: store_0 state after initialization: undefined
 
 // So the state of our application is still undefined after the initialization? Well of course it is,
 // our reducer is not doing anything... Remember how we described the expected behavior of reducer in
@@ -39,7 +39,7 @@ var store_1 = createStore(reducer_1)
 // Output: reducer_1 was called with state undefined and action { type: '@@redux/INIT' }
 
 console.log('store_1 state after initialization:', store_1.getState())
-// Output: Redux state after initialization: {}
+// Output: store_1 state after initialization: {}
 
 // As expected, the state returned by Redux after initialization is now {}
 
@@ -55,7 +55,7 @@ var store_2 = createStore(reducer_2)
 // Output: reducer_2 was called with state {} and action { type: '@@redux/INIT' }
 
 console.log('store_2 state after initialization:', store_2.getState())
-// Output: Redux state after initialization: {}
+// Output: store_2 state after initialization: {}
 
 // You've probably noticed that since we've used the default parameter on state parameter of reducer_2,
 // we no longer get undefined as state's value in our reducer's body.
@@ -81,15 +81,15 @@ var store_3 = createStore(reducer_3)
 // Output: reducer_3 was called with state {} and action { type: '@@redux/INIT' }
 
 console.log('redux state after initialization:', store_3.getState())
-// Output: Redux state after initialization: {}
+// Output: redux state after initialization: {}
 
-// Nothing new in our state so far since we did not dispatch any action yet. But there are few 
+// Nothing new in our state so far since we did not dispatch any action yet. But there are few
 // important things to pay attention to in the last example:
 //     0) I assumed that our action contains a type and a value property. type property is mostly
 //        a convention in flux actions and the value property could have been anything else.
 //     1) You'll see a lot the pattern involving a switch to respond accordingly
 //        to an action received in your reducers
-//     2) When using a switch, NEVER forget to have a "default: return state" because 
+//     2) When using a switch, NEVER forget to have a "default: return state" because
 //        if you don't, you'll end up having your reducer return undefined (hence loosing your state).
 //     3) Notice how we returned a new state made by merging current state with { message: action.value },
 //        all that thanks to this awesome ES7 notation (Object Spread): { ...state, message: action.value }
