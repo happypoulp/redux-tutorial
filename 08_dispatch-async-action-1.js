@@ -1,10 +1,10 @@
 // Tutorial 8 - dispatch-async-action-1.js
 
-// We saw previously how we could dispatch actions and how those actions will modify
+// We previously saw how we can dispatch actions and how those actions will modify
 // the state of our application thanks to reducers.
 
-// But so far we've only considered synchronous actions, or more exactly action creators
-// that produce an action synchronously: when called, an action is returned immediately.
+// But so far we've only considered synchronous actions or, more exactly, action creators
+// that produce an action synchronously: when called an action is returned immediately.
 
 // Let's now imagine a simple asynchronous use-case:
 // 1) user clicks on button "Say Hi in 2 seconds"
@@ -91,7 +91,7 @@ var asyncSayActionCreator_1 = function (message) {
 }
 
 // Again you'll notice that our action creator is not returning an action, it is returning a function.
-// So there are high chances that our reducers won't know what to do with it. But we never know, so let's 
-// try it out and find out what would happen...
+// So there is a high chance that our reducers won't know what to do with it. But you never know, so let's 
+// try it out and find out what happens...
 
 // Go to next tutorial: dispatch_action_creator-2.js

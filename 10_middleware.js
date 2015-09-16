@@ -1,9 +1,9 @@
 // Tutorial 10 - middleware.js
 
 // We left dispatch-async-action-2.js with a new concept: "middleware". Somehow middleware should help us 
-// to solve async action handling. So what exactly is a middleware?
+// to solve async action handling. So what exactly is middleware?
 
-// Generally speaking a middleware is something that comes in between parts A and B of an application to
+// Generally speaking middleware is something that goes between parts A and B of an application to
 // transform what A sends before passing it to B. So instead of having:
 // A -----> B
 // we end up having
@@ -16,12 +16,12 @@
 
 // action ---> dispatcher ---> middleware 1 ---> middleware 2 ---> reducers
 
-// Our middlewares will be called each time an action (or whatever else, like a function in our 
+// Our middleware will be called each time an action (or whatever else, like a function in our 
 // async action creator case) is dispatched and it should be able to help our action creator 
-// to dispatch the real action when he wants to (or do nothing - this is a totally valid and 
+// dispatch the real action when it wants to (or do nothing - this is a totally valid and 
 // sometimes desired behavior).
 
-// In Redux, middlewares are functions that must conform to a very specific signature and follow
+// In Redux, middleware are functions that must conform to a very specific signature and follow
 // a strict structure:
 /*
     var anyMiddleware = function ({ dispatch, getState }) {
@@ -38,13 +38,13 @@
 //     middleware or your action creator needs to read data from state) to the 2 other levels
 // 2) The second level provide the next function that will allow you to explicitly hand over
 //     your transformed input to the next middleware or to Redux (so that Redux can finally call all reducers).
-// 3) the third level provide the action received from the previous middleware or from your dispatch
+// 3) the third level provides the action received from the previous middleware or from your dispatch
 //     and can either trigger the next middleware (to let the action continue to flow) or process
 //     the action in any appropriate way.
 
-// The middleware we have to build for our async action creator, is called a thunk middleware and
+// The middleware we have to build for our async action creator is called a thunk middleware and
 // its code is provided here: https://github.com/gaearon/redux-thunk.
-// Here is how it looks like (translated to es5 for readability):
+// Here is what it looks like (translated to es5 for readability):
 
 var thunkMiddleware = function ({ dispatch, getState }) {
     // console.log('Enter thunkMiddleware');
@@ -133,7 +133,7 @@ function logMiddleware ({ dispatch, getState }) {
 }
 
 // Same below for a middleware to discard all actions that goes through (not very useful as is
-// but with a bit of more logic it could selectively discard few actions while passing others
+// but with a bit of more logic it could selectively discard a few actions while passing others
 // to next middleware or Redux):
 function discardMiddleware ({ dispatch, getState }) {
     return function(next) {

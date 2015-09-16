@@ -5,7 +5,7 @@
 
 // Both of these questions can be answered using a single react-redux's binding: @connect class decorator.
 
-// As we explained previously, when using the Provider component, we allow all components of our app to
+// As we previously explained, when using the Provider component we allow all components of our app to
 // access Redux. But this access can only be made through the undocumented feature "React's context". To
 // avoid asking you to use such "dark" React API, Redux is exposing a decorator (an ES7 feature that
 // makes it possible to annotate and modify classes and properties at design time -
@@ -24,7 +24,7 @@ import { connect } from 'react-redux'
 // our reducers. If you haven't yet, go get a look at our action creator (./actions-creators.js).
 import * as actionCreators from './action-creators'
 
-// The "connect" decorator takes as its only parameter, a function that will select which slice of your
+// The "connect" decorator takes, as its only parameter, a function that will select which slice of your
 // state you want to expose to your component. This function is logically called a "selector" and
 // receives 2 parameters: the state of your store and the current props of your component.
 // The props of the component are provided to handle common case like extracting a slice of your

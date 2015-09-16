@@ -18,7 +18,7 @@ export default class Application extends React.Component {
     return (
       // As explained above, the Provider must wrap your application's Root component. This way,
       // this component and all of its children (even deeply nested ones) will have access to your
-      // Redux store. Of course, to allow Provider to do that, you must give to him the store
+      // Redux store. Of course, to allow Provider to do that, you must give it the store
       // you built previously (via a "store" props).
       // That's almost all there is to say about Provider... One last word though:
       // You'll notice in the code above that Provider needs to have as its child, a function that returns
