@@ -2,8 +2,8 @@
 
 // Hi there! So you're ready to play with Redux in a React app?
 
-// The application you're about to see could not be more minimalist (from a product point of vue
-// and from a design point of vue - hence sorry for the black and white)... We'll only focus
+// The application you're about to see could not be more minimalist (from a product point of view
+// and from a design point of view - sorry for the black and white)... We'll only focus
 // on the use of 2 main bindings of react-redux (https://github.com/gaearon/react-redux):
 // 1) the Provider component
 // 2) the connect decorator

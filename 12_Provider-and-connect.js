@@ -6,7 +6,7 @@
 
 // All explanations for this example are inlined in the sources inside ./12_src/src/.
 
-// Once you've read few line below, start with 12_src/src/server.js.
+// Once you've read the lines below, start with 12_src/src/server.js.
 
 // To build our React application and serve it to a browser, we'll use:
 // - A very simple node HTTP server (https://nodejs.org/api/http.html)

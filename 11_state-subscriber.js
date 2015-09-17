@@ -65,7 +65,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // Theoretically speaking we could stop here. Our Flux loop is closed, we understood all concepts that make
 // Flux and we saw that it is not that much of a mystery. But to be honest, there is still a lot to talk
 // about and a few things in the last example were intentionally left aside to keep the simplest form of this
-// last Flux's concept:
+// last Flux concept:
 
 // - Our subscriber callback did not receive the state as a parameter, why?
 // - Since we did not received our new state, we were bound to exploit our closured store (store_0) so this
@@ -84,11 +84,11 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // Previously integrated inside Redux (before 1.0.0), this repository holds all the bindings we need to simplify
 // our life when using Redux inside React.
 
-// Back to our "subscribe" case... Why exactly do we have this subscribe function that seems so simple but in 
+// Back to our "subscribe" case... Why exactly do we have this subscribe function that seems so simple but at 
 // the same time also seems to not provide enough features?
 
 // It's simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
-//  highly extensible and this allow to build some crazy products like the Redux DevTools
+//  highly extensible and this allows developers to build some crazy products like the Redux DevTools
 // (https://github.com/gaearon/redux-devtools).
 
 // But in the end we still need a "better" API to subscribe to our store changes. That's exactly what react-redux

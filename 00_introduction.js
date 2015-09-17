@@ -1,15 +1,15 @@
 // Tutorial 0 - introduction.js
 
 // Why this tutorial?
-// When trying to learn Redux, I realized that I had accumulated in the past incorrect knowledge about flux through
+// While trying to learn Redux, I realized that I had accumulated incorrect knowledge about flux through
 // articles I read and personal experience. I don't mean that articles about flux are not well written
 // but I just didn't grasp concepts correctly. In the end, I was just applying documentation of different
 // flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read
 // about (actions / actions creators, store, dispatcher, etc).
 // Only when I started using Redux did I realize that flux is more simple than I thought. This is all
 // thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced 
-// by other framework I tried before. I feel today that Redux is a much better way to learn about flux
-// than many other framework. That's why I want now to share with everyone, using my own words,
+// by other frameworks I tried before. I now feel that Redux is a much better way to learn about flux
+// than many other frameworks. That's why I want now to share with everyone, using my own words,
 // flux concepts that I am starting to grasp, focusing on the use of Redux.
 
 // You may have seen this diagram representing the famous unidirectional data flow of a flux application:
@@ -40,7 +40,7 @@
 // understand why it exists and what role it plays. In the end you'll see that this diagram makes perfect sense
 // once we understood each of its parts.
 
-// But before we start, let's speak a little bit about why flux exists and why we need it...
+// But before we start, let's talk a little bit about why flux exists and why we need it...
 // Let's pretend we're building a web application. What are all web applications made of?
 // 1) Templates / html = View
 // 2) Data that will populate our views = Models
@@ -56,8 +56,8 @@
 
 // So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing 
 // these new terms we are now able to express more precisely things that were regrouped under 
-// various terminologies... For example, isn't a data fetch an action? just as a click is also an action?
-// and a change in an input is an action too... Then we're all already used to issuing actions from our
+// various terminologies... For example, isn't a data fetch an action? Just like a click is also an action?
+// And a change in an input is an action too... Then we're all already used to issuing actions from our
 // applications, we were just calling them differently. And instead of having handlers for those
 // actions directly modify Models or Views, flux ensures all actions go first through something called
 // a dispatcher, then through our stores, and finally all watchers of stores are notified.
