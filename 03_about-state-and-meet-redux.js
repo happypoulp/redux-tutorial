@@ -3,7 +3,7 @@
 // Sometimes the actions that we'll handle in our application will not only inform us
 // that something happened but also tell us that data needs to be updated.
 
-// This is actually quite a big challenge in any apps.
+// This is actually quite a big challenge in any app.
 // Where do I keep all the data regarding my application along its lifetime?
 // How do I handle modification of such data?
 // How do I propagate modifications to all parts of my application?
@@ -17,10 +17,10 @@
 
 // Where do I keep all the data regarding my application along its lifetime?
 //     You keep it the way you want (JS object, array, Immutable structure, ...).
-//     Data of your application will be called state. Makes sense since we're talking about
-//     all the applications data that will evolve over time, it's really the applications state.
+//     Data of your application will be called state. This makes sense since we're talking about
+//     all the application's data that will evolve over time, it's really the application's state.
 //     But you hand it over to Redux (Redux is "state container", remember?).
-// How do I handle modification of such data?
+// How do I handle data modifications?
 //     Using reducers.
 //     A reducer is a subscriber to actions.
 //     A reducer is just a function that receives the current state of your application, the action,

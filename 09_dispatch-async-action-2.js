@@ -48,6 +48,6 @@ store_0.dispatch(asyncSayActionCreator_1('Hi'))
 // "middleware" thing?
 
 // Just to reassure you, our action creator asyncSayActionCreator_1 is well-written and will work as expected
-// as soon as we've figured out what is a middleware and how to use it.
+// as soon as we've figured out what middleware is and how to use it.
 
 // Go to next tutorial: middleware.js
