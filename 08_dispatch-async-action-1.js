@@ -56,7 +56,7 @@ console.log('store_0 state after action SAY:', store_0.getState())
 //     Sun Aug 02 2015 01:03:05 GMT+0200 (CEST)
 //     speaker was called with state {} and action { type: 'SAY', message: 'Hi' }
 //     Sun Aug 02 2015 01:03:05 GMT+0200 (CEST)
-//     store_0 state after action SET_NAME: { speaker: { message: 'Hi' } }
+//     store_0 state after action SAY: { speaker: { message: 'Hi' } }
 
 
 // ... then we see that our store is updated immediately.
