@@ -19,7 +19,7 @@
 //     You keep it the way you want (JS object, array, Immutable structure, ...).
 //     Data of your application will be called state. This makes sense since we're talking about
 //     all the application's data that will evolve over time, it's really the application's state.
-//     But you hand it over to Redux (Redux is "state container", remember?).
+//     But you hand it over to Redux (Redux is a "state container", remember?).
 // How do I handle data modifications?
 //     Using reducers.
 //     A reducer is a subscriber to actions.
