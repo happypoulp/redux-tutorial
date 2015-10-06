@@ -1,7 +1,7 @@
 // Tutorial 4 - simple-reducer.js
 
 // Now that we know how to create a Redux instance that will hold the state of our application
-// we will focus on those reducers function that will allow to transform this state.
+// we will focus on those reducer functions that will allow to transform this state.
 
 // A word about reducer VS store:
 // As you may have noticed, in the flux diagram shown in the introduction, we had "Store", not
