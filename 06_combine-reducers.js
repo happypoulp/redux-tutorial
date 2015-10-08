@@ -69,6 +69,13 @@ var itemsReducer = function (state = [], action) {
     }
 }
 
+// I'd like you to pay special attention to the initial state that was actually given to
+// each reducer: userReducer got an initial state in the form of a literal object ({}) while
+// itemsReducer got an initial state in the form of an array ([]). This is just to
+// make clear that a reducer can actually handle any type of data structure. It's really
+// up to you to decide which data structure suits your needs (an object literal, an array,
+// a boolean, a string, an immutable structure, ...).
+
 // With this new multiple reducer approach, we will end up having each reducer handle only
 // a slice of our application state.
 
@@ -113,6 +120,9 @@ console.log('store_0 state after initialization:', store_0.getState())
 //     user: {}, // {} is the slice returned by our userReducer
 //     items: [] // [] is the slice returned by our itemsReducer
 // }
+
+// Since we initialized the state of each of our reducers with a specific value ({} for userReducer and
+// [] for itemsReducer) it's no coincidence that those values are found in the final Redux state.
 
 // By now we have a good idea of how reducers will work. It would be nice to have some
 // actions being dispatched and see the impact on our Redux state.
