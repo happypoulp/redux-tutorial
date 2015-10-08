@@ -11,12 +11,34 @@
 // makes it possible to annotate and modify classes and properties at design time -
 // https://github.com/wycats/javascript-decorators) that you can use on a component class.
 
-// The "connect" decorator literally connects your component with your Redux's store. By doing so,
+// The "connect" decorator (written @connect) literally connects your component with your Redux's store. By doing so,
 // it provides your store's dispatch function through a component's prop and also adds any
 // properties you want to expose part of your store's state.
 
 // Using @connect, you'll turn a dumb component (https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0),
 // into a smart component with very little code overhead.
+
+// Please note also that you are not forced to use this ES7 decorator notation if you don't like it:
+/*
+  @somedecorator
+  export default class MyClass {}
+
+  // is the same as:
+
+  class MyClass {}
+  export default somedecorator(MyClass)
+
+  // Using Redux's connect decorator, those are equivalent:
+  let mapStateToProps = (state) => { ... }
+
+  @connect(mapStateToProps)
+  export default class MyClass {}
+
+  // is the same as:
+
+  class MyClass {}
+  export default connect(mapStateToProps)(MyClass)
+*/
 
 import React from 'react'
 import { connect } from 'react-redux'
