@@ -40,7 +40,7 @@
     var store = createStore()
 */
 
-// But if you run the code above, you'll notice that it throw an error:
+// But if you run the code above, you'll notice that it throws an error:
 //     Error: Invariant Violation: Expected the reducer to be a function.
 
 // That's because createStore expects a function that will allow it to reduce your state.
