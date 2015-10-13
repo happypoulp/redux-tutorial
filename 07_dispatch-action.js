@@ -84,7 +84,7 @@ store_0.dispatch(setNameActionCreator('bob'))
 
 console.log('store_0 state after action SET_NAME:', store_0.getState())
 // Output:
-// store_0 state after initialization: { user: { name: 'bob' }, items: [] }
+// store_0 state after action SET_NAME: { user: { name: 'bob' }, items: [] }
 
 // We just handled our first action and it changed the state of our application!
 
