@@ -12,7 +12,7 @@
 
 // Redux (https://github.com/gaearon/redux) is a "predictable state container for JavaScript apps"
 
-// Let's review the above questions and reply to them with 
+// Let's review the above questions and reply to them with
 // Redux vocabulary (flux vocabulary too for some of them):
 
 // Where do I keep all the data regarding my application along its lifetime?

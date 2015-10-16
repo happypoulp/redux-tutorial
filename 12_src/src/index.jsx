@@ -4,6 +4,7 @@
 // instantiate our React Application root component and attach it to the DOM.
 
 import React from 'react'
+import { render } from 'react-dom'
 // All store creation specific code is located in ./create-store.js
 import createStore from './create-store'
 // Application is the root component of our application and the one that holds Redux's Provider...
@@ -14,9 +15,10 @@ import Application from './application'
 // instantiation.
 const store = createStore()
 
-// Now, time to render our application to the DOM...
-React.render(
-  // ... and to provide our Redux store to our Root component as a prop so that Redux 
+// Now, time to render our application to the DOM using ReactDOM.render (or just render thanks to
+// the ES6 notation: import { render } from 'react-dom')...
+render(
+  // ... and to provide our Redux store to our Root component as a prop so that Redux
   // Provider can do its job.
   <Application store={store} />,
   document.getElementById('app-wrapper')
