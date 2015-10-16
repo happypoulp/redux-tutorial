@@ -13,11 +13,3 @@
 // refer to it from now on: http://gaearon.github.io/redux/
 
 // Have fun with React and Redux!
-
-// TODO
-// Before leaving, here is a last example that might give you additional inspiration...
-// In this example, we:
-// 1) integrate one more great player of the React ecosystem, React-Router
-//     (https://github.com/rackt/react-router)
-// 2) Show how an isomorphic / universal app using Redux could look like
-// TODO

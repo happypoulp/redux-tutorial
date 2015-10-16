@@ -18,6 +18,9 @@
 //     DX (Developer experience) by having our components live-reload in the browser
 //     while we're tweaking them in our code editor.
 
+// An important point for those of you who are already using React: this application is built
+// upon React 0.14.
+
 // I won't detail Webpack Dev Server and React Hot Loader setup here since it's done pretty
 // well in React Hot Loader's docs.
 import webpackDevServer from './12_src/src/webpack-dev-server'
@@ -33,7 +36,7 @@ webpackDevServer.listen(port)
 // ... and our main app server.
 server.listen(port)
 
-console.log(`Server is listening on 127.0.0.1:${port}`)
+console.log(`Server is listening on http://127.0.0.1:${port}`)
 
 // Go to 12_src/src/server.js...
 

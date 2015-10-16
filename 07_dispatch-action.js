@@ -39,6 +39,7 @@ var reducer = combineReducers({
 var store_0 = createStore(reducer)
 
 
+console.log("\n", '### It starts here')
 console.log('store_0 state after initialization:', store_0.getState())
 // Output:
 // store_0 state after initialization: { user: {}, items: [] }
@@ -47,7 +48,7 @@ console.log('store_0 state after initialization:', store_0.getState())
 //     "To dispatch an action we need... a dispatch function." Captain obvious
 
 // The dispatch function we're looking for is provided by Redux and will propagate our action
-// to all of our reducers! The dispatch function is accessible through the Redux 
+// to all of our reducers! The dispatch function is accessible through the Redux
 // instance property "dispatch"
 
 // To dispatch an action, simply call:

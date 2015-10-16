@@ -96,9 +96,9 @@ var reducer = combineReducers({
 })
 // Output:
 // userReducer was called with state {} and action { type: '@@redux/INIT' }
-// userReducer was called with state {} and action { type: 'a.2.e.i.j.9.e.j.y.v.i' }
+// userReducer was called with state {} and action { type: '@@redux/PROBE_UNKNOWN_ACTION_9.r.k.r.i.c.n.m.i' }
 // itemsReducer was called with state [] and action { type: '@@redux/INIT' }
-// itemsReducer was called with state [] and action { type: 'i.l.j.c.a.4.z.3.3.d.i' }
+// itemsReducer was called with state [] and action { type: '@@redux/PROBE_UNKNOWN_ACTION_4.f.i.z.l.3.7.s.y.v.i' }
 var store_0 = createStore(reducer)
 // Output:
 // userReducer was called with state {} and action { type: '@@redux/INIT' }
