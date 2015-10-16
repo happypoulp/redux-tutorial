@@ -43,7 +43,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 // We use the same ES6 import trick to get all action creators and produce a hash like we did with
-// our reducers. If you haven't yet, go get a look at our action creator (./actions-creators.js).
+// our reducers. If you haven't yet, go get a look at our action creator (./action-creators.js).
 import * as actionCreators from './action-creators'
 
 // The "connect" decorator is designed to address all use-cases, from the most simple to the most 
