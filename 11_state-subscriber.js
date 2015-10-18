@@ -68,7 +68,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // last Flux concept:
 
 // - Our subscriber callback did not receive the state as a parameter, why?
-// - Since we did not received our new state, we were bound to exploit our closured store (store_0) so this
+// - Since we did not receive our new state, we were bound to exploit our closured store (store_0) so this
 //     solution is not acceptable in a real multi-modules application...
 // - How do we actually update our views?
 // - How do we unsubscribe from store updates?
