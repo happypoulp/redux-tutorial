@@ -94,4 +94,4 @@ var asyncSayActionCreator_1 = function (message) {
 // So there is a high chance that our reducers won't know what to do with it. But you never know, so let's 
 // try it out and find out what happens...
 
-// Go to next tutorial: dispatch_action_creator-2.js
+// Go to next tutorial: dispatch-async-action-2.js
