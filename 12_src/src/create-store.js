@@ -6,7 +6,7 @@
 // One thing to notice though: we're not using the thunk middleware that we've seen before. Instead
 // we use a promise middleware solution that will allow us to handle asynchronous action creators and
 // to do some nice real time updates on our UI (could also do some optimistic updates).
-// This middleware was discussed here: https://github.com/gaearon/redux/issues/99 and it is used
+// This middleware was discussed here: https://github.com/rackt/redux/issues/99 and it is used
 // in this very good react-redux-universal-example: https://github.com/erikras/react-redux-universal-hot-example
 // that I strongly suggest you get a look at (later, not right now ;)).
 
