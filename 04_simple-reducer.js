@@ -11,7 +11,7 @@
 // called, it is passed the state that needs to be updated. This way, Redux's stores became
 // "stateless stores" and were renamed reducers.
 
-// As said before, when creating a Redux instance you must give it a reducer function...
+// As stated before, when creating a Redux instance you must give it a reducer function...
 
 import { createStore } from 'redux'
 
@@ -34,9 +34,9 @@ var store_1 = createStore(reducer)
 // Redux actually dispatches an init action ({ type: '@@redux/INIT' })
 
 // When called, a reducer is given those parameters: (state, action)
-// It's then very logical that at an application initialization the state, not being
+// It's then very logical that at an application initialization, the state, not being
 // initialized yet, is "undefined"
 
-// But then what is the state of our application after Redux sent its "init" action?
+// But then what is the state of our application after Redux sends its "init" action?
 
 // Go to next tutorial: get-state.js

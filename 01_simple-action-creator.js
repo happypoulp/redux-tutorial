@@ -3,11 +3,11 @@
 // We started to talk a little about actions in the introduction but what exactly are those "action creators"
 // and how are they linked to "actions"?
 
-// It's actually so simple that few lines of code can explain it all!
+// It's actually so simple that a few lines of code can explain it all!
 
 // The action creator is just a function...
 var actionCreator = function() {
-    // ...that creates an action (yeah the name action creator is pretty obvious now) and returns it
+    // ...that creates an action (yeah, the name action creator is pretty obvious now) and returns it
     return {
         type: 'AN_ACTION'
     }
@@ -15,7 +15,7 @@ var actionCreator = function() {
 
 // So is that all? yes.
 
-// However one thing to note is the format of the action. This is kind of a convention in flux
+// However, one thing to note is the format of the action. This is kind of a convention in flux
 // that the action is an object that contains a "type" property. This type allows for further
 // handling of the action. Of course, the action can also contain other properties to 
 // pass any data you want.
@@ -29,7 +29,7 @@ console.log(actionCreator())
 // Output: { type: 'AN_ACTION' }
 
 // Ok, this works but it does not go anywhere...
-// What we need is to have this action to be sent somewhere so that 
+// What we need is to have this action be sent somewhere so that 
 // anyone interested could know that something happened and could act accordingly.
 // We call this process "Dispatching an action".
 

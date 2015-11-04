@@ -1,6 +1,6 @@
 // Tutorial 12 - Provider-and-connect.js
 
-// There is not much to say here, you've seen that plenty of time and it should feel pretty
+// There is not much to say here, you've seen this plenty of times and it should feel pretty
 // familiar to you now...
 
 // One thing to notice though: we're not using the thunk middleware that we've seen before. Instead

@@ -7,7 +7,7 @@
 // |  Store  |----▶ events  |-----▶   Views   |
 // |_________|    |_________|     |___________|
 
-// Without it, we cannot update our views when the store change.
+// Without it, we cannot update our views when the store changes.
 
 // Fortunately, there is a very simple way to "watch" over our Redux's store updates:
 
@@ -87,7 +87,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // Back to our "subscribe" case... Why exactly do we have this subscribe function that seems so simple but at 
 // the same time also seems to not provide enough features?
 
-// It's simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
+// Its simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
 //  highly extensible and this allows developers to build some crazy products like the Redux DevTools
 // (https://github.com/gaearon/redux-devtools).
 
