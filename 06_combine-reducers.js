@@ -83,8 +83,8 @@ var itemsReducer = function (state = [], action) {
 
 // So how do we combine our reducers? And how do we tell Redux that each reducer will only handle
 // a slice of our state?
-// It's fairly simple. We use Redux combineReducers helper function. combineReducers take a hash and
-// return a function that when invoked, will call all our reducers, retrieve the new slice of state and
+// It's fairly simple. We use Redux combineReducers helper function. combineReducers takes a hash and
+// returns a function that, when invoked, will call all our reducers, retrieve the new slice of state and
 // reunite them in a state object (a simple hash {}) that Redux is holding.
 // Long story short, here is how you create a Redux instance with multiple reducers:
 

@@ -22,7 +22,7 @@ import React from 'react'
 // so you won't find any route specific logic below (except for rejecting favicon request)
 var server = http.createServer(function(req, res) {
 
-  // Forget this, it's just to avoid serving anything when browser automatically
+  // Forget this, it's just to avoid serving anything when the browser automatically
   // requests favicon (if not, this server would send back an html page).
   if (req.url.match('favicon.ico')) {
     return res.end()

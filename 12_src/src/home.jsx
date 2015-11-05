@@ -56,14 +56,14 @@ import * as actionCreators from './action-creators'
 
 // We will only focus here on the first 'connect' parameter: mapStateToProps...
 
-// The "connect" decorator takes, as first parameter, a function that will select which slice of your
+// The "connect" decorator takes, as its first parameter, a function that will select which slice of your
 // state you want to expose to your component. This function is logically called a "selector" and
 // receives 2 parameters: the state of your store and the current props of your component.
 // The "mapStateToProps" name that we gave above is just a semantic name for our function that clearly
-// express what the function does: it maps (understand "extract some of") the state to few component props.
-// The props of the component are provided to handle common case like extracting a slice of your
+// expresses what the function does: it maps (read "extracts some of") the state to a few component props.
+// The props of the component are provided to handle common cases like extracting a slice of your
 // state depending on a prop value (Ex: state.items[props.someID]).
-// The "selector"  function is expected to return the props that you wish to expose to your component (usually via 
+// The "selector" function is expected to return the props that you wish to expose to your component (usually via 
 // an object literal). It's up to you to eventually transform the state you're receiving before returning it.
 // You can have a look right at that simplest 'connect' usage below.
 
@@ -80,8 +80,8 @@ export default class Home extends React.Component {
   onTimeButtonClick () {
     // This button handler will dispatch an action in response to a click event from a user.
     // We use here the dispatch function "automatically" provided by @connect in a prop.
-    // There are alternatives way to call actionCreators that are already bound to dispatch and those
-    // imply to provide the second parameter to 'connect':
+    // There are alternative ways to call actionCreators that are already bound to dispatch and those
+    // imply providing the second parameter to 'connect':
     // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
     this.props.dispatch(actionCreators.getTime())
   }

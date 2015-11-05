@@ -38,7 +38,7 @@
 // In this tutorial we'll gradually introduce you to concepts of the diagram above. But instead of trying
 // to explain this complete diagram and the overall flow it describes, we'll take each piece separately and try to
 // understand why it exists and what role it plays. In the end you'll see that this diagram makes perfect sense
-// once we understood each of its parts.
+// once we understand each of its parts.
 
 // But before we start, let's talk a little bit about why flux exists and why we need it...
 // Let's pretend we're building a web application. What are all web applications made of?
@@ -62,7 +62,7 @@
 // actions directly modify Models or Views, flux ensures all actions go first through something called
 // a dispatcher, then through our stores, and finally all watchers of stores are notified.
 
-// To get more clarity how MVC and flux differs, we'll
+// To get more clarity how MVC and flux differ, we'll
 // take a classic use-case in an MVC application:
 // In a classic MVC application you could easily end up with:
 // 1) User clicks on button "A"

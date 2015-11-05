@@ -17,7 +17,7 @@ console.log('store_0 state after initialization:', store_0.getState())
 // Output: store_0 state after initialization: undefined
 
 // So the state of our application is still undefined after the initialization? Well of course it is,
-// our reducer is not doing anything... Remember how we described the expected behavior of reducer in
+// our reducer is not doing anything... Remember how we described the expected behavior of a reducer in
 // "about-state-and-meet-redux"?
 //     "A reducer is just a function that receives the current state of your application, the action,
 //     and returns a new state modified (or reduced as they call it)"
