@@ -1,7 +1,7 @@
 // Tutorial 7 - dispatch-action.js
 
 // So far we've focused on building our reducer(s) and we haven't dispatched any of our own actions.
-// We'll keep the same reducers from our previous tutorial and handle few actions:
+// We'll keep the same reducers from our previous tutorial and handle a few actions:
 
 var userReducer = function (state = {}, action) {
     console.log('userReducer was called with state', state, 'and action', action)
