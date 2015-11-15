@@ -77,19 +77,22 @@ import * as actionCreators from './action-creators'
     }
 })
 export default class Home extends React.Component {
-  onTimeButtonClick () {
+  onTimeButtonClick (delay) {
     // This button handler will dispatch an action in response to a click event from a user.
     // We use here the dispatch function "automatically" provided by @connect in a prop.
     // There are alternative ways to call actionCreators that are already bound to dispatch and those
     // imply providing the second parameter to 'connect':
     // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
-    this.props.dispatch(actionCreators.getTime())
+    // The "delay" value given to actionCreators.getTime is a delay to simulate an async work being done before we
+    // are able to get the current time. Try to change this value to verify that the delay correctly impacts our UI.
+    this.props.dispatch(actionCreators.getTime(delay))
   }
   render () {
 
     // Thanks to our @connect decorator, we're able to get the data previously selected through the props.
     var { frozen, time, reduxState } = this.props
     var attrs = {}
+    const DELAY = 500 // in ms
 
     if (frozen) {
         attrs = {
@@ -103,10 +106,14 @@ export default class Home extends React.Component {
         <span>
           <b>What time is it?</b> { time ? `It is currently ${time}` : 'No idea yet...' }
         </span>
+        <br /> <br />
+        <i>
+          When clicking the button below, the time will be provided after a {DELAY}ms delay.<br />
+          Try to change this value (in <b>src/home.jsx - line 95</b>) to verify that the delay given correctly impacts our UI.
+        </i>
         <br />
-        {/* We register our button handler here and use the experimental ES7 function's binding operator "::"
-            to have our handler to be bound to the component's instance. */}
-        <button { ...attrs } onClick={::this.onTimeButtonClick}>Get time!</button>
+        {/* We register our button "onClick" handler here: */}
+        <button { ...attrs } onClick={() => this.onTimeButtonClick(DELAY)}>Get time!</button>
         <pre>
           redux state = { JSON.stringify(reduxState, null, 2) }
         </pre>
