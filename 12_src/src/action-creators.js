@@ -27,7 +27,7 @@ import Promise from 'bluebird'
 
 // The action is delayed by "delay" ms passed as a parameter of the action creator. Try to change
 // this value to verify that the delay correctly impacts our UI.
-export function getTime(delay = 100) {
+export function getTime(delay = 2000) {
   return {
     types: ['GET_TIME_REQUEST', 'GET_TIME_SUCCESS', 'GET_TIME_FAILURE'],
     promise: () => {
