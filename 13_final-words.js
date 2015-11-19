@@ -1,11 +1,11 @@
 // Tutorial 13 - final-words.js
 
-// There is actually more in Redux and react-redux than we showed you through this tutorial. For example,
+// There is actually more to Redux and react-redux than what we showed you with this tutorial. For example,
 // concerning Redux, you may be interested in bindActionCreators (to produce a hash of action creators
 // already bound to dispatch - http://gaearon.github.io/redux/docs/api/bindActionCreators.html).
 
-// We hope that you now have enough keys to understand Flux better and to be able to see
-// more clearly how flux implementations differ from one another and especially, how Redux stands out ;).
+// We hope we've given you the keys to better understand Flux and to see more clearly 
+// how Flux implementations differ from one another--especially how Redux stands out ;).
 
 // Where to go from here?
 
