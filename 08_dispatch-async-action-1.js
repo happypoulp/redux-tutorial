@@ -91,7 +91,7 @@ var asyncSayActionCreator_1 = function (message) {
 }
 
 // Again you'll notice that our action creator is not returning an action, it is returning a function.
-// So there is a high chance that our reducers won't know what to do with it. But you never know, so let's 
+// So there is a high chance that our reducers won't know what to do with it. But you never know, so let's
 // try it out and find out what happens...
 
 // Go to next tutorial: dispatch-async-action-2.js

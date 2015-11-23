@@ -2,7 +2,7 @@
 
 // We're close to having a complete Flux loop but we still miss one critical part:
 
-//  _________      _________       ___________  
+//  _________      _________       ___________
 // |         |    | Change  |     |   React   |
 // |  Store  |----▶ events  |-----▶   Views   |
 // |_________|    |_________|     |___________|
@@ -84,7 +84,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // Previously integrated inside Redux (before 1.0.0), this repository holds all the bindings we need to simplify
 // our life when using Redux inside React.
 
-// Back to our "subscribe" case... Why exactly do we have this subscribe function that seems so simple but at 
+// Back to our "subscribe" case... Why exactly do we have this subscribe function that seems so simple but at
 // the same time also seems to not provide enough features?
 
 // Its simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is

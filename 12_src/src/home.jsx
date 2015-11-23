@@ -46,7 +46,7 @@ import { connect } from 'react-redux'
 // our reducers. If you haven't yet, go get a look at our action creator (./action-creators.js).
 import * as actionCreators from './action-creators'
 
-// The "connect" decorator is designed to address all use-cases, from the most simple to the most 
+// The "connect" decorator is designed to address all use-cases, from the most simple to the most
 // complex ones. In the present example, we're not going to use the most complex form of 'connect' but
 // you can find all information about it in the complete 'connect' API documentation here:
 // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
@@ -63,7 +63,7 @@ import * as actionCreators from './action-creators'
 // expresses what the function does: it maps (read "extracts some of") the state to a few component props.
 // The props of the component are provided to handle common cases like extracting a slice of your
 // state depending on a prop value (Ex: state.items[props.someID]).
-// The "selector" function is expected to return the props that you wish to expose to your component (usually via 
+// The "selector" function is expected to return the props that you wish to expose to your component (usually via
 // an object literal). It's up to you to eventually transform the state you're receiving before returning it.
 // You can have a look right at that simplest 'connect' usage below.
 
