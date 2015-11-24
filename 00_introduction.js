@@ -7,7 +7,7 @@
 // flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read
 // about (actions / actions creators, store, dispatcher, etc).
 // Only when I started using Redux did I realize that flux is more simple than I thought. This is all
-// thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced 
+// thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced
 // by other frameworks I tried before. I now feel that Redux is a much better way to learn about flux
 // than many other frameworks. That's why I want now to share with everyone, using my own words,
 // flux concepts that I am starting to grasp, focusing on the use of Redux.
@@ -15,20 +15,20 @@
 // You may have seen this diagram representing the famous unidirectional data flow of a flux application:
 
 /*
-                 _________               ____________               ___________ 
+                 _________               ____________               ___________
                 |         |             |            |             |           |
                 | Action  |------------▶| Dispatcher |------------▶| callbacks |
                 |_________|             |____________|             |___________|
                      ▲                                                   |
                      |                                                   |
                      |                                                   |
- _________       ____|_____                                          ____▼____ 
+ _________       ____|_____                                          ____▼____
 |         |◀----|  Action  |                                        |         |
 | Web API |     | Creators |                                        |  Store  |
 |_________|----▶|__________|                                        |_________|
                      ▲                                                   |
                      |                                                   |
-                 ____|________           ____________                ____▼____ 
+                 ____|________           ____________                ____▼____
                 |   User       |         |   React   |              | Change  |
                 | interactions |◀--------|   Views   |◀-------------| events  |
                 |______________|         |___________|              |_________|
@@ -54,8 +54,8 @@
 //   "action creators" -> action -> dispatcher -> callback
 // - Views look like React views (or anything else as far as flux is concerned)
 
-// So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing 
-// these new terms we are now able to express more precisely things that were regrouped under 
+// So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing
+// these new terms we are now able to express more precisely things that were regrouped under
 // various terminologies... For example, isn't a data fetch an action? Just like a click is also an action?
 // And a change in an input is an action too... Then we're all already used to issuing actions from our
 // applications, we were just calling them differently. And instead of having handlers for those
@@ -71,7 +71,7 @@
 // 4) A change handler on Model "B" triggers a change on View "B" that re-renders itself
 
 // Finding the source of a bug in such an environment when something goes wrong can become quite challenging
-// very quickly. This is because every View can watch every Model, and every Model can watch other Models, so 
+// very quickly. This is because every View can watch every Model, and every Model can watch other Models, so
 // basically data can arrive from a lot of places and be changed by a lot of sources (any views or any models).
 
 //  Whereas when using flux and its unidirectional data flow, the example above could become:
@@ -80,9 +80,9 @@
 // 3) since all other stores are also notified about the action, Store B can react to the same action too
 // 4) View "B" gets notified by the change in Stores A and B, and re-renders
 
-// See how we avoid directly linking Store A to Store B? Each store can only be 
-// modified by an action and nothing else. And once all stores have replied to an action, 
-// views can finally update. So in the end, data always flows in one way: 
+// See how we avoid directly linking Store A to Store B? Each store can only be
+// modified by an action and nothing else. And once all stores have replied to an action,
+// views can finally update. So in the end, data always flows in one way:
 //     action -> store -> view -> action -> store -> view -> action -> ...
 
 // Just as we started our use case above from an action, let's start our tutorial with

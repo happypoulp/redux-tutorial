@@ -11,7 +11,7 @@
 // But before we get to that, let's see the basic setup of this application and how it
 // will be served to browser...
 
-// We won't use Express (http://expressjs.com/) in this app since we don't really need 
+// We won't use Express (http://expressjs.com/) in this app since we don't really need
 // it to serve a simple html page.
 
 // "http" module will be used to create the http server
