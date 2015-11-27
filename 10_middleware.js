@@ -139,6 +139,7 @@ function discardMiddleware ({ dispatch, getState }) {
     return function(next) {
         return function (action) {
             console.log('discardMiddleware action received:', action)
+            return next(action)
         }
     }
 }
