@@ -43,4 +43,4 @@ console.log(actionCreator())
 // Read more about actions and action creators here:
 // http://gaearon.github.io/redux/docs/recipes/ReducingBoilerplate.html
 
-// Go to next tutorial: simple-subscriber.js
+// Go to next tutorial: 02_simple-subscriber.js

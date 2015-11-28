@@ -88,4 +88,4 @@
 // Just as we started our use case above from an action, let's start our tutorial with
 // actions and action creators.
 
-// Go to next tutorial: simple-action-creator.js
+// Go to next tutorial: 01_simple-action-creator.js

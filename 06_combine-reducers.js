@@ -127,4 +127,4 @@ console.log('store_0 state after initialization:', store_0.getState())
 // By now we have a good idea of how reducers will work. It would be nice to have some
 // actions being dispatched and see the impact on our Redux state.
 
-// Go to next tutorial: dispatch-action.js
+// Go to next tutorial: 07_dispatch-action.js

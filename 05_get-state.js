@@ -107,4 +107,4 @@ console.log('store_3 state after initialization:', store_3.getState())
 // Now that we're starting to handle actions in our reducer let's talk about having multiple reducers and
 // combining them.
 
-// Go to next tutorial: combine-reducers.js
+// Go to next tutorial: 06_combine-reducers.js

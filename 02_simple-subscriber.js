@@ -17,4 +17,4 @@ mySubscriber()
 // So far here is the flow of our application
 // ActionCreator -> Action ... Subscriber
 
-// Go to next tutorial: about-state-and-meet-redux.js
+// Go to next tutorial: 03_about-state-and-meet-redux.js
