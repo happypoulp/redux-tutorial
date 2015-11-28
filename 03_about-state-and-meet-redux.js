@@ -53,4 +53,4 @@ var store = createStore(() => {})
 
 // Seems good for now...
 
-// Go to next tutorial: simple-reducer.js
+// Go to next tutorial: 04_simple-reducer.js

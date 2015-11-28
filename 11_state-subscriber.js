@@ -101,4 +101,4 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // We'll now cover those bindings and show how simple it is to wire your components to Redux's state.
 
-// Go to next tutorial: provide-and-connect.js
+// Go to next tutorial: 12_Provider-and-connect.js

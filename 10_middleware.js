@@ -162,4 +162,4 @@ function discardMiddleware ({ dispatch, getState }) {
 
 // So how do we subscribe to our Redux store updates?
 
-// Go to next tutorial: state-subscriber.js
+// Go to next tutorial: 11_state-subscriber.js

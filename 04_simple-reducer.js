@@ -39,4 +39,4 @@ var store_1 = createStore(reducer)
 
 // But then what is the state of our application after Redux sends its "init" action?
 
-// Go to next tutorial: get-state.js
+// Go to next tutorial: 05_get-state.js
