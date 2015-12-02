@@ -44,7 +44,7 @@
 
 // The middleware we have to build for our async action creator is called a thunk middleware and
 // its code is provided here: https://github.com/gaearon/redux-thunk.
-// Here is what it looks like (translated to es5 for readability):
+// Here is what it looks like (with function body translated to es5 for readability):
 
 var thunkMiddleware = function ({ dispatch, getState }) {
     // console.log('Enter thunkMiddleware');
