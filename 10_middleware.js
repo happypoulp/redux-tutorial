@@ -65,7 +65,7 @@ var thunkMiddleware = function ({ dispatch, getState }) {
 // "applyMiddleware" takes all your middlewares as parameters and returns a function to be called
 // with Redux createStore. When this last function is invoked, it will produce "a higher-order
 // store that applies middleware to a store's dispatch".
-// (from https://github.com/gaearon/redux/blob/v1.0.0-rc/src/utils/applyMiddleware.js)
+// (from https://github.com/rackt/redux/blob/v1.0.0-rc/src/utils/applyMiddleware.js)
 
 // Here is how you would integrate a middleware to your Redux store:
 
@@ -149,7 +149,7 @@ function discardMiddleware ({ dispatch, getState }) {
 //     const finalCreateStore = applyMiddleware(discardMiddleware, thunkMiddleware)(createStore)
 // should make your actions never reach your thunkMiddleware and even less your reducers.
 
-// See http://gaearon.github.io/redux/docs/introduction/Ecosystem.html, section Middlewares, to
+// See http://rackt.org/redux/docs/introduction/Ecosystem.html, section Middlewares, to
 // see other middleware examples.
 
 // Let's sum up what we've learned so far:

@@ -1,6 +1,6 @@
 // Tutorial 12 - Provider-and-connect.js
 
-// Now is the time to meet the first binding that redux-react (https://github.com/gaearon/react-redux)
+// Now is the time to meet the first binding that redux-react (https://github.com/rackt/react-redux)
 // brings to us: the Provider component.
 
 // Provider is a React Component designed to be used as a wrapper of your application's root component. Its
