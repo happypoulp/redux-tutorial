@@ -42,6 +42,18 @@
 //     and can either trigger the next middleware (to let the action continue to flow) or process
 //     the action in any appropriate way.
 
+// Those of you who are trained to functional programming may have recognized above an opportunity
+// to apply a functional patterns: currying (if you aren't, don't worry, skipping the next 10 lines
+// won't affect your redux understanding). Using currying, you could simplify the above function like that:
+/*
+    // "curry" may come any functional programming library (lodash, ramda, etc.)
+    var thunkMiddleware = curry(
+        ({dispatch, getState}, next, action) => (
+            // your middleware-specific code goes here
+        )
+    );
+*/
+
 // The middleware we have to build for our async action creator is called a thunk middleware and
 // its code is provided here: https://github.com/gaearon/redux-thunk.
 // Here is what it looks like (with function body translated to es5 for readability):
