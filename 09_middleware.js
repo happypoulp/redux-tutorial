@@ -1,4 +1,4 @@
-// Tutorial 10 - middleware.js
+// Tutorial 09 - middleware.js
 
 // We left dispatch-async-action-2.js with a new concept: "middleware". Somehow middleware should help us
 // to solve async action handling. So what exactly is middleware?
@@ -174,4 +174,4 @@ function discardMiddleware ({ dispatch, getState }) {
 
 // So how do we subscribe to our Redux store updates?
 
-// Go to next tutorial: 11_state-subscriber.js
+// Go to next tutorial: 10_state-subscriber.js

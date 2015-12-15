@@ -1,4 +1,4 @@
-// Tutorial 4 - simple-reducer.js
+// Tutorial 03 - simple-reducer.js
 
 // Now that we know how to create a Redux instance that will hold the state of our application
 // we will focus on those reducer functions that will allow us to transform this state.
@@ -18,6 +18,8 @@ import { createStore } from 'redux'
 var store_0 = createStore(() => {})
 
 // ... so that Redux can call this function on your application state each time an action occurs.
+// Giving reducer(s) to createStore is exactly how redux registers the action "handlers" (read reducers) we
+// were talking about in section 01_simple-action-creator.js.
 
 // Let's put some log in our reducer
 
@@ -39,4 +41,4 @@ var store_1 = createStore(reducer)
 
 // But then what is the state of our application after Redux sends its "init" action?
 
-// Go to next tutorial: 05_get-state.js
+// Go to next tutorial: 04_get-state.js

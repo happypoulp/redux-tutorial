@@ -1,4 +1,4 @@
-// Tutorial 6 - combine-reducers.js
+// Tutorial 05 - combine-reducers.js
 
 // We're now starting to get a grasp of what a reducer is...
 
@@ -127,4 +127,4 @@ console.log('store_0 state after initialization:', store_0.getState())
 // By now we have a good idea of how reducers will work. It would be nice to have some
 // actions being dispatched and see the impact on our Redux state.
 
-// Go to next tutorial: 07_dispatch-action.js
+// Go to next tutorial: 06_dispatch-action.js

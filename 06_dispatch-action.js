@@ -1,4 +1,4 @@
-// Tutorial 7 - dispatch-action.js
+// Tutorial 06 - dispatch-action.js
 
 // So far we've focused on building our reducer(s) and we haven't dispatched any of our own actions.
 // We'll keep the same reducers from our previous tutorial and handle a few actions:
@@ -96,4 +96,4 @@ console.log('store_0 state after action SET_NAME:', store_0.getState())
 // So far here is the flow of our application
 // ActionCreator -> Action -> dispatcher -> reducer
 
-// Go to next tutorial: 08_dispatch-async-action-1.js
+// Go to next tutorial: 07_dispatch-async-action-1.js

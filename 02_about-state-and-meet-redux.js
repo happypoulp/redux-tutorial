@@ -1,4 +1,4 @@
-// Tutorial 3 - about-state-and-meet-redux.js
+// Tutorial 02 - about-state-and-meet-redux.js
 
 // Sometimes the actions that we'll handle in our application will not only inform us
 // that something happened but also tell us that data needs to be updated.
@@ -21,7 +21,7 @@
 //     all the application's data that will evolve over time, it's really the application's state.
 //     But you hand it over to Redux (Redux is a "state container", remember?).
 // How do I handle data modifications?
-//     Using reducers.
+//     Using reducers (called "stores" in traditional flux).
 //     A reducer is a subscriber to actions.
 //     A reducer is just a function that receives the current state of your application, the action,
 //     and returns a new state modified (or reduced as they call it)
@@ -53,4 +53,4 @@ var store = createStore(() => {})
 
 // Seems good for now...
 
-// Go to next tutorial: 04_simple-reducer.js
+// Go to next tutorial: 03_simple-reducer.js

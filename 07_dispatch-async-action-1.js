@@ -1,4 +1,4 @@
-// Tutorial 8 - dispatch-async-action-1.js
+// Tutorial 07 - dispatch-async-action-1.js
 
 // We previously saw how we can dispatch actions and how those actions will modify
 // the state of our application thanks to reducers.
@@ -94,4 +94,4 @@ var asyncSayActionCreator_1 = function (message) {
 // So there is a high chance that our reducers won't know what to do with it. But you never know, so let's
 // try it out and find out what happens...
 
-// Go to next tutorial: 09_dispatch-async-action-2.js
+// Go to next tutorial: 08_dispatch-async-action-2.js

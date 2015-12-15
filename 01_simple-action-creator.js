@@ -35,7 +35,8 @@ console.log(actionCreator())
 
 // To dispatch an action we need... a dispatch function ("Captain obvious").
 // And to let anyone interested know that an action happened, we need a mechanism to register
-// subscribers.
+// "handlers". Such "handlers" to actions in traditional flux application are called stores and
+// we'll see in the next section how they are called in redux.
 
 // So far here is the flow of our application:
 // ActionCreator -> Action
@@ -43,4 +44,4 @@ console.log(actionCreator())
 // Read more about actions and action creators here:
 // http://rackt.org/redux/docs/recipes/ReducingBoilerplate.html
 
-// Go to next tutorial: 02_simple-subscriber.js
+// Go to next tutorial: 02_about-state-and-meet-redux.js

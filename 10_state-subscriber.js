@@ -1,4 +1,4 @@
-// Tutorial 11 - state-subscriber.js
+// Tutorial 10 - state-subscriber.js
 
 // We're close to having a complete Flux loop but we still miss one critical part:
 
@@ -101,4 +101,4 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // We'll now cover those bindings and show how simple it is to wire your components to Redux's state.
 
-// Go to next tutorial: 12_Provider-and-connect.js
+// Go to next tutorial: 11_Provider-and-connect.js

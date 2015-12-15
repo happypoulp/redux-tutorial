@@ -1,4 +1,4 @@
-// Tutorial 5 - get-state.js
+// Tutorial 04 - get-state.js
 
 // How do we retrieve the state from our Redux instance?
 
@@ -107,4 +107,4 @@ console.log('store_3 state after initialization:', store_3.getState())
 // Now that we're starting to handle actions in our reducer let's talk about having multiple reducers and
 // combining them.
 
-// Go to next tutorial: 06_combine-reducers.js
+// Go to next tutorial: 05_combine-reducers.js

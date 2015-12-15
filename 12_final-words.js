@@ -1,4 +1,4 @@
-// Tutorial 13 - final-words.js
+// Tutorial 12 - final-words.js
 
 // There is actually more to Redux and react-redux than what we showed you with this tutorial. For example,
 // concerning Redux, you may be interested in bindActionCreators (to produce a hash of action creators
