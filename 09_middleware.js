@@ -43,7 +43,7 @@
 //     the action in any appropriate way.
 
 // Those of you who are trained to functional programming may have recognized above an opportunity
-// to apply a functional patterns: currying (if you aren't, don't worry, skipping the next 10 lines
+// to apply a functional pattern: currying (if you aren't, don't worry, skipping the next 10 lines
 // won't affect your redux understanding). Using currying, you could simplify the above function like that:
 /*
     // "curry" may come any functional programming library (lodash, ramda, etc.)
