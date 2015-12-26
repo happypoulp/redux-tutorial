@@ -7,7 +7,7 @@
 
 // As we previously explained, when using the Provider component we allow all components of our app to
 // access Redux. But this access can only be made through the undocumented feature "React's context". To
-// avoid asking you to use such "dark" React API, Redux is exposing a decorator (an ES7 feature that
+// avoid asking you to use such a "dark" React API, React-Redux is exposing a decorator (an ES7 feature that
 // makes it possible to annotate and modify classes and properties at design time -
 // https://github.com/wycats/javascript-decorators) that you can use on a component class.
 
@@ -28,7 +28,7 @@
   class MyClass {}
   export default somedecorator(MyClass)
 
-  // Using Redux's connect decorator, those are equivalent:
+  // Using React-Redux's connect decorator, these are equivalent:
   let mapStateToProps = (state) => { ... }
 
   @connect(mapStateToProps)
