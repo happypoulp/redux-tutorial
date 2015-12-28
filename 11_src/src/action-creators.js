@@ -7,7 +7,7 @@ import Promise from 'bluebird'
 // Our action creator just gets the current time in a delayed fashion to illustrate the use of the promise
 // middleware.
 
-// The promise middleware works by waiting either:
+// The promise middleware works by waiting for either:
 // 1) an action with this format:
 //    {
 //      types: [REQUEST, SUCCESS, FAILURE], // actions types given in this specific order
