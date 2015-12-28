@@ -1,12 +1,12 @@
 redux-tutorial
 =========================
 
-This repository contains a step by step tutorial to get a grasp about flux and most particularly about [Redux](https://github.com/rackt/redux).
+This repository contains a step by step tutorial to help grasp flux and more specifically [Redux](https://github.com/rackt/redux).
 
-The official and very exhaustive Redux documentation is available [here](http://redux.js.org/) and should be your number One source of truth regarding Redux. The present tutorial only will offer you an introduction to flux concepts through Redux use but for further or more detailed info, please refer to the Redux documentation.
+The official and very exhaustive Redux documentation is available [here](http://redux.js.org/) and should be your number one source of truth regarding Redux. The present tutorial will only offer you an introduction to flux concepts through Redux use. For further or more detailed info, please refer to the Redux documentation.
 
 ### Prerequisites
-It is required for you to know a bit of ES6 and ES7 (Object Spread) to understand correctly some of the examples given in this repo. Be also aware that this tutorial targets redux 3.0.2 and react-redux 4.0.0.
+It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly understand some of the examples given in this repo. Also be aware that this tutorial targets redux 3.0.2 and react-redux 4.0.0.
 
 ### Clone the repository
 `git clone https://github.com/happypoulp/redux-tutorial.git`
@@ -19,7 +19,7 @@ It is required for you to know a bit of ES6 and ES7 (Object Spread) to understan
 
 ### Browse the tutorial
 
-This tutorial is split into js file to be read as is and they are numbered in the preferred order of browsing.
+This tutorial is split into a sequence of javascript files that are intended to be read in order. 
 
 Start with the first tutorial: [Introduction](00_introduction.js)
 
