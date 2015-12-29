@@ -3,42 +3,54 @@
 // Our tutorial is almost over and the only missing piece to leave you with a good overview of Redux is:
 // How do we read from our store's state and how do we dispatch actions?
 
-// Both of these questions can be answered using a single react-redux's binding: @connect class decorator.
+// Both of these questions can be answered using a single react-redux's binding: connect.
 
 // As we previously explained, when using the Provider component we allow all components of our app to
 // access Redux. But this access can only be made through the undocumented feature "React's context". To
-// avoid asking you to use such a "dark" React API, React-Redux is exposing a decorator (an ES7 feature that
-// makes it possible to annotate and modify classes and properties at design time -
-// https://github.com/wycats/javascript-decorators) that you can use on a component class.
+// avoid asking you to use such a "dark" React API, React-Redux is exposing a function that you can use
+// on a component class.
 
-// The "connect" decorator (written @connect) literally connects your component with your Redux's store.
+// The function we're talking about is "connect" and it allows to literally connect your component with your Redux's store.
 // By doing so, it provides your store's dispatch function through a component's prop and also adds any
 // properties you want to expose as part of your store's state.
 
-// Using @connect, you'll turn a dumb component (https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0),
-// into a smart component with very little code overhead.
+// Using "connect", you'll turn a dumb component into a smart component with very little code overhead
+// (https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
 
-// Please note also that you are not forced to use this ES7 decorator notation if you don't like it:
+// "connect" is a function that takes as parameters few mapping functions and that returns a function expecting
+// the actual component class you want to connect. Such a function (connect) is called a Higher Order Component (HOC).
+// Higher Order functions comes from a functional pattern designed to add features / behaviors to
+// their inputs (component, store, ...) without using inheritance. This approach favors composition over inheritance
+// which is the prefered way to build React applications (actually this is not limited at all to React applications).
+// Read more about HOCs and composition here:
+// - https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750#.lpp7we7mx
+// - http://natpryce.com/articles/000814.html
+
+// The "connect" HOC is designed to address all use-cases, from the most simple to the most
+// complex ones. In the present example, we're not going to use the most complex form of 'connect' but
+// you can find all information about it in the complete 'connect' API documentation here:
+// https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
+
+// Here is the complete 'connect' signature:
+// connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])
+// and here is how you're supposed to use it:
 /*
-  @somedecorator
-  export default class MyClass {}
-
-  // is the same as:
-
-  class MyClass {}
-  export default somedecorator(MyClass)
-
-  // Using React-Redux's connect decorator, these are equivalent:
-  let mapStateToProps = (state) => { ... }
-
-  @connect(mapStateToProps)
-  export default class MyClass {}
-
-  // is the same as:
-
-  class MyClass {}
-  export default connect(mapStateToProps)(MyClass)
+  const wrappedComponentClass = connect(...)(ComponentClass)
 */
+
+// We will only focus here on the first 'connect' parameter: mapStateToProps...
+
+// "connect" takes, as its first parameter, a function that will select which slice of your
+// state you want to expose to your component. This function is logically called a "selector" and
+// receives 2 parameters: the state of your store and the current props of your component.
+// You'll see below that we named this function "mapStateToProps". This name is just a semantic name
+// for our function that clearly expresses what the function does: it maps (read "extracts some of")
+//  the state to a few component props.
+// The props of the component are also provided as arguments to handle common cases like extracting a slice of your
+// state depending on a prop value (Ex: state.items[props.someID]).
+// "mapStateToProps" is expected to return the props that you wish to expose to your component (usually via
+// an object literal). It's up to you to eventually transform the state you're receiving before returning it.
+// You can have a look right at that simplest 'connect' usage below (just after the component class definition).
 
 import React from 'react'
 import { connect } from 'react-redux'
@@ -46,40 +58,10 @@ import { connect } from 'react-redux'
 // our reducers. If you haven't yet, go get a look at our action creator (./action-creators.js).
 import * as actionCreators from './action-creators'
 
-// The "connect" decorator is designed to address all use-cases, from the most simple to the most
-// complex ones. In the present example, we're not going to use the most complex form of 'connect' but
-// you can find all information about it in the complete 'connect' API documentation here:
-// https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
-
-// Here is the complete 'connect' signature:
-// connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])
-
-// We will only focus here on the first 'connect' parameter: mapStateToProps...
-
-// The "connect" decorator takes, as its first parameter, a function that will select which slice of your
-// state you want to expose to your component. This function is logically called a "selector" and
-// receives 2 parameters: the state of your store and the current props of your component.
-// The "mapStateToProps" name that we gave above is just a semantic name for our function that clearly
-// expresses what the function does: it maps (read "extracts some of") the state to a few component props.
-// The props of the component are provided to handle common cases like extracting a slice of your
-// state depending on a prop value (Ex: state.items[props.someID]).
-// The "selector" function is expected to return the props that you wish to expose to your component (usually via
-// an object literal). It's up to you to eventually transform the state you're receiving before returning it.
-// You can have a look right at that simplest 'connect' usage below.
-
-@connect((state/*, props*/) => {
-    // This is our select function that will extract from the state the data slice we want to expose
-    // through props to our component.
-    return {
-      reduxState: state,
-      frozen: state._time.frozen,
-      time: state._time.time
-    }
-})
-export default class Home extends React.Component {
+class Home extends React.Component {
   onTimeButtonClick (delay) {
     // This button handler will dispatch an action in response to a click event from a user.
-    // We use here the dispatch function "automatically" provided by @connect in a prop.
+    // We use here the dispatch function "automatically" provided by connect in a prop.
     // There are alternative ways to call actionCreators that are already bound to dispatch and those
     // imply providing the second parameter to 'connect':
     // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
@@ -89,7 +71,7 @@ export default class Home extends React.Component {
   }
   render () {
 
-    // Thanks to our @connect decorator, we're able to get the data previously selected through the props.
+    // Thanks to "connect", we're able to get specific selected data, through the props.
     var { frozen, time, reduxState } = this.props
     var attrs = {}
     const DELAY = 500 // in ms
@@ -102,7 +84,7 @@ export default class Home extends React.Component {
 
     return (
       <div>
-        <h1>Provider and @connect example</h1>
+        <h1>Provider and connect example</h1>
         <span>
           <b>What time is it?</b> { time ? `It is currently ${time}` : 'No idea yet...' }
         </span>
@@ -121,5 +103,78 @@ export default class Home extends React.Component {
     )
   }
 }
+
+// This is our select function that will extract from the state the data slice we want to expose
+// through props to our component.
+const mapStateToProps = (state/*, props*/) => {
+  return {
+    frozen: state._time.frozen,
+    time: state._time.time,
+    // It is very bad practice to provide the full state like that (reduxState: state) and it is only done here
+    // for you to see its stringified version in our page. More about that here:
+    // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#inject-dispatch-and-every-field-in-the-global-state
+    reduxState: state,
+  }
+}
+
+const ConnectedHome = connect(mapStateToProps)(Home)
+
+export default ConnectedHome
+
+// You might have noticed that thanks to redux, while we have a dynamic component that requires some state (to keep
+// the current time), this state is by no mean present inside the component. Our component only receives props with
+// needed data.
+// What we have here is called a stateless component. You should always try to have more stateless components (presented
+// above as dumb components) in your applications that stateful ones because they are much more reusable.
+// As suggested in "onTimeButtonClick" handler, we could even go further by passing our click callback as a prop
+// via "connect" second parameter "mapDispatchToProps". Doing so, we would extract our button behavior outside of
+// our component, making it even more reusable by allowing for a different click behavior.
+// Reusability might seem like a fancy overused concept but what having a reusable component also means, is that it's
+// one component that can be very easily tested (because you can then inject in your component whatever data and
+// test handlers you want and easily ensure its correct behavior).
+
+// Before going to ./12_final-words.js, read this side-note about an alternative way to use "connect" HOC...
+
+// Because connect(...) returns a function that accept a class and returns another class, you can use it as
+// an ES7 decorator if you want to. Decorators are an experimental ES7 features that make it possible to annotate
+// and modify classes and properties at design time (https://github.com/wycats/javascript-decorators).
+
+// This feature being experimental, it is subject to change and breakage. This means that by using it today, you must be
+// fully aware of and accept the uncertainty regarding its evolution. Decorators provide syntax sugar to write the
+// code above slightly differently. Instead of writing:
+
+/*
+  class MyClass {}
+  export default somedecorator(MyClass)
+*/
+
+// You can write:
+
+/*
+  @somedecorator
+  export default class MyClass {}
+*/
+
+// Applying this syntax to redux connect, you can replace:
+
+/*
+  let mapStateToProps = (state) => { ... }
+  class MyClass {}
+  export default connect(mapStateToProps)(MyClass)
+*/
+
+// by:
+
+/*
+  let mapStateToProps = (state) => { ... }
+  @connect(mapStateToProps)
+  export default class MyClass {}
+*/
+
+// As you can see the application of the HOC function on the component class is now made implicit ( @connect(mapStateToProps) )
+// instead of calling it ourselves ( @connect(mapStateToProps)(Myclass) ). Some find this approach more elegant, others
+// dislike the fact that it's hiding what is really happening and many just don't get how decorators works. Knowing all that
+// and remembering that decorators are still experimental, you can now decide by youselves which "connect" usage you
+// prefer and you won't be suprised to find both syntax in the many articles, tutorials, starter kits, etc. out there.
 
 // Go to ./12_final-words.js for our last advice about what to do now...
