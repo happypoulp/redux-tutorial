@@ -3,13 +3,12 @@
 // Our tutorial is almost over and the only missing piece to leave you with a good overview of Redux is:
 // How do we read from our store's state and how do we dispatch actions?
 
-// Both of these questions can be answered using a single react-redux's binding: @connect class decorator.
+// Both of these questions can be answered using a single react-redux's binding: connect.
 
 // As we previously explained, when using the Provider component we allow all components of our app to
 // access Redux. But this access can only be made through the undocumented feature "React's context". To
-// avoid asking you to use such a "dark" React API, React-Redux is exposing a decorator (an ES7 feature that
-// makes it possible to annotate and modify classes and properties at design time -
-// https://github.com/wycats/javascript-decorators) that you can use on a component class.
+// avoid asking you to use such a "dark" React API, React-Redux is exposing a function that you can use 
+// on a component class.
 
 // The "connect" decorator (written @connect) literally connects your component with your Redux's store.
 // By doing so, it provides your store's dispatch function through a component's prop and also adds any

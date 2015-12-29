@@ -6,7 +6,7 @@
 // and from a design point of view - sorry for the black and white)... We'll only focus
 // on the use of 2 main bindings of react-redux (https://github.com/gaearon/react-redux):
 // 1) the Provider component
-// 2) the connect decorator
+// 2) the connect Higher Order Component
 
 // But before we get to that, let's see the basic setup of this application and how it
 // will be served to browser...
