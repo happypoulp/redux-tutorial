@@ -7,7 +7,7 @@
     "url": "https://github.com/happypoulp/redux-tutorial.git"
   },
   "scripts": {
-    "example": "babel-node --stage=0"
+    "example": "babel-node"
   },
   "author": "François Bonnefont",
   "license": "ISC",
