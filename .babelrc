@@ -1,3 +1,8 @@
 {
-  "stage": 0
+  "stage": 0,
+  /* avoid config inheritance:
+  https://github.com/happypoulp/redux-tutorial/issues/88
+  http://stackoverflow.com/questions/32540598/disable-babelrc-inheritance
+  */
+  "breakConfig": true
 }
