@@ -29,4 +29,9 @@ Being real js files, each example can be run to verify that it works as intended
 
 `npm run example 01_simple-action-creator.js`
 
+### A rundown of the Redux Tutorial inspired by @happypoulp
+
+[Mastering React Redux Basics](https://www.stanleycyang.com/tutorials/mastering-react-redux)
+[Find the README on Github](https://github.com/stanleycyang/master-react-redux)
+
 Enjoy!
