@@ -125,7 +125,7 @@ export default ConnectedHome
 // the current time), this state is by no mean present inside the component. Our component only receives props with
 // needed data.
 // What we have here is called a stateless component. You should always try to have more stateless components (presented
-// above as dumb components) in your applications that stateful ones because they are much more reusable.
+// above as dumb components) in your applications than stateful ones because they are much more reusable.
 // As suggested in "onTimeButtonClick" handler, we could even go further by passing our click callback as a prop
 // via "connect" second parameter "mapDispatchToProps". Doing so, we would extract our button behavior outside of
 // our component, making it even more reusable by allowing for a different click behavior.
