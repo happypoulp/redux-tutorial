@@ -1,13 +1,11 @@
 // Tutorial 12 - Provider-and-connect.js
 
-// Now is the time to meet the first binding that redux-react (https://github.com/rackt/react-redux)
+// Now is the time to meet the first binding that redux-react (https://github.com/reactjs/react-redux)
 // brings to us: the Provider component.
 
 // Provider is a React Component designed to be used as a wrapper of your application's root component. Its
-// purpose is to provide your redux instance to all of your application's components. How it does that does not
-// really matter to us but just to let you know, it's using React's context feature (it's undocumented so you
-// don't have to know about it, but if you're curious:
-// https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html).
+// purpose is to provide your Redux instance to all of your application's components. Documentation is here:
+// https://github.com/reactjs/react-redux/blob/3.x/docs/api.md#provider-store
 
 import React from 'react'
 import Home from './home'

@@ -161,7 +161,7 @@ function discardMiddleware ({ dispatch, getState }) {
 //     const finalCreateStore = applyMiddleware(discardMiddleware, thunkMiddleware)(createStore)
 // should make your actions never reach your thunkMiddleware and even less your reducers.
 
-// See http://rackt.org/redux/docs/introduction/Ecosystem.html, section Middleware, to
+// See http://redux.js.org/docs/introduction/Ecosystem.html#middleware, section Middleware, to
 // see other middleware examples.
 
 // Let's sum up what we've learned so far:
