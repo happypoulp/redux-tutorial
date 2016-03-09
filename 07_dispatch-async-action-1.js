@@ -14,7 +14,7 @@
 // Of course this message is part of our application state so we have to save it
 // in Redux store. But what we want is to have our store save the message
 // only 2 seconds after the action creator is called (because if we were to update our state
-// immediately, any subscriber to state's modifications - like our view -  would be notified right away
+// immediately, any subscriber to state's modifications - like our view - would be notified right away
 // and would then react to this update 2 seconds too soon).
 
 // If we were to call an action creator like we did until now...

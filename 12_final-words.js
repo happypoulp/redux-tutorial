@@ -5,7 +5,7 @@
 // already bound to dispatch - http://rackt.org/redux/docs/api/bindActionCreators.html).
 
 // We hope we've given you the keys to better understand Flux and to see more clearly
-// how Flux implementations differ from one another--especially how Redux stands out ;).
+// how Flux implementations differ from one another - especially how Redux stands out ;).
 
 // Where to go from here?
 

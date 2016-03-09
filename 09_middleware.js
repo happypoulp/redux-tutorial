@@ -34,9 +34,9 @@
 */
 
 // As you can see above, a middleware is made of 3 nested functions (that will get called sequentially):
-// 1) The first level provide the dispatch function and a getState function (if your
+// 1) The first level provides the dispatch function and a getState function (if your
 //     middleware or your action creator needs to read data from state) to the 2 other levels
-// 2) The second level provide the next function that will allow you to explicitly hand over
+// 2) The second level provides the next function that will allow you to explicitly hand over
 //     your transformed input to the next middleware or to Redux (so that Redux can finally call all reducers).
 // 3) the third level provides the action received from the previous middleware or from your dispatch
 //     and can either trigger the next middleware (to let the action continue to flow) or process
@@ -44,9 +44,9 @@
 
 // Those of you who are trained to functional programming may have recognized above an opportunity
 // to apply a functional pattern: currying (if you aren't, don't worry, skipping the next 10 lines
-// won't affect your redux understanding). Using currying, you could simplify the above function like that:
+// won't affect your Redux understanding). Using currying, you could simplify the above function like that:
 /*
-    // "curry" may come any functional programming library (lodash, ramda, etc.)
+    // "curry" may come from any functional programming library (lodash, ramda, etc.)
     var thunkMiddleware = curry(
         ({dispatch, getState}, next, action) => (
             // your middleware-specific code goes here
@@ -79,7 +79,7 @@ var thunkMiddleware = function ({ dispatch, getState }) {
 // store that applies middleware to a store's dispatch".
 // (from https://github.com/rackt/redux/blob/v1.0.0-rc/src/utils/applyMiddleware.js)
 
-// Here is how you would integrate a middleware to your Redux store:
+// Here is how you would integrate a middleware into your Redux store:
 
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
@@ -144,7 +144,7 @@ function logMiddleware ({ dispatch, getState }) {
     }
 }
 
-// Same below for a middleware to discard all actions that goes through (not very useful as is
+// Same below for a middleware to discard all actions that are dispatched (not very useful as is
 // but with a bit of more logic it could selectively discard a few actions while passing others
 // to next middleware or Redux):
 function discardMiddleware ({ dispatch, getState }) {
@@ -161,7 +161,7 @@ function discardMiddleware ({ dispatch, getState }) {
 //     const finalCreateStore = applyMiddleware(discardMiddleware, thunkMiddleware)(createStore)
 // should make your actions never reach your thunkMiddleware and even less your reducers.
 
-// See http://rackt.org/redux/docs/introduction/Ecosystem.html, section Middlewares, to
+// See http://rackt.org/redux/docs/introduction/Ecosystem.html, section Middleware, to
 // see other middleware examples.
 
 // Let's sum up what we've learned so far:
@@ -170,7 +170,7 @@ function discardMiddleware ({ dispatch, getState }) {
 // 3) We know how to handle custom actions like asynchronous actions thanks to middlewares
 
 // The only missing piece to close the loop of Flux application is to be notified about
-// state updates to be able to react to them (by re-rendering our components for example).
+// state updates in order to react to them (by re-rendering our components for example).
 
 // So how do we subscribe to our Redux store updates?
 

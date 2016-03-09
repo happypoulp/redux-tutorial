@@ -31,7 +31,7 @@ import server from './11_src/src/server'
 // if port equals X, we'll use X for server's port and X+1 for webpack-dev-server's port
 const port = 5050
 
-// Start our webpack dev server...
+// Start our Webpack dev server...
 webpackDevServer.listen(port)
 // ... and our main app server.
 server.listen(port)
