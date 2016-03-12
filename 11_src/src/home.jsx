@@ -91,7 +91,7 @@ class Home extends React.Component {
         <br /> <br />
         <i>
           When clicking the button below, the time will be provided after a {DELAY}ms delay.<br />
-          Try to change this value (in <b>src/home.jsx - line 95</b>) to verify that the delay given correctly impacts our UI.
+          Try to change this value (in <b>src/home.jsx - line 77</b>) to verify that the delay given correctly impacts our UI.
         </i>
         <br />
         {/* We register our button "onClick" handler here: */}
