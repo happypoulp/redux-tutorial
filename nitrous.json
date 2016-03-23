@@ -1,0 +1,9 @@
+{
+  "template": "nodejs",
+  "ports": [],
+  "name": "redux-tutorial",
+  "description": "This repository contains a step by step tutorial to help grasp flux and more specifically Redux.",
+  "scripts": {
+    "post-create": "cd ~/code/redux-tutorial && echo 'running npm install...' && npm install --no-progress && echo 'done npm install'"
+  }
+}
