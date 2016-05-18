@@ -50,5 +50,5 @@ var server = http.createServer(function(req, res) {
 export default server
 
 // Go to ./index.jsx, where our app is initialized. For those of you who are not familiar with webpack,
-// index.jsx is defined as the entry point (the first file) of our JS bundle (in 12_src/webpack.config.js)
+// index.jsx is defined as the entry point (the first file) of our JS bundle (in 11_src/webpack.config.js)
 // and is automatically executed when the JS bundle is loaded in our browser.
