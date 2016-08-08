@@ -42,6 +42,6 @@ console.log(actionCreator())
 // ActionCreator -> Action
 
 // Read more about actions and action creators here:
-// http://rackt.org/redux/docs/recipes/ReducingBoilerplate.html
+// http://redux.js.org/docs/recipes/ReducingBoilerplate.html
 
 // Go to next tutorial: 02_about-state-and-meet-redux.js
