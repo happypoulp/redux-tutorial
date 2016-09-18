@@ -4,7 +4,12 @@
 // brings to us: the Provider component.
 
 // Provider is a React Component designed to be used as a wrapper of your application's root component. Its
-// purpose is to provide your Redux instance to all of your application's components. Documentation is here:
+// purpose is to provide your Redux instance to all of your application's components. How it does that does not
+// really matter to us but just to let you know, it's using React's "context" feature (it's an advanced and 
+// experimental feature so you don't have to know about it, but if you're curious, here are few links to learn about it:
+// - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
+// - https://facebook.github.io/react/docs/context.html).
+// Documentation for Redux Provider is here:
 // https://github.com/reactjs/react-redux/blob/3.x/docs/api.md#provider-store
 
 import React from 'react'
