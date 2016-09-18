@@ -10,7 +10,7 @@ import createStore from './create-store'
 // Application is the root component of our application and the one that holds Redux's Provider...
 import Application from './application'
 
-// Just as we did so many times in previous examples, we need to create our redux instance. This time
+// Just as we did so many times in previous examples, we need to create our Redux instance. This time
 // all code for that task was moved to a specific module that returns a single function to trigger the
 // instantiation.
 const store = createStore()

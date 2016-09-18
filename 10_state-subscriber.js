@@ -9,7 +9,7 @@
 
 // Without it, we cannot update our views when the store changes.
 
-// Fortunately, there is a very simple way to "watch" over our Redux's store updates:
+// Fortunately, there is a very simple way to "watch" over our Redux store's updates:
 
 /*
     store.subscribe(function() {
@@ -88,7 +88,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // the same time also seems to not provide enough features?
 
 // Its simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
-//  highly extensible and this allows developers to build some crazy products like the Redux DevTools
+// highly extensible and this allows developers to build some crazy products like the Redux DevTools
 // (https://github.com/gaearon/redux-devtools).
 
 // But in the end we still need a "better" API to subscribe to our store changes. That's exactly what react-redux
@@ -97,7 +97,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // use bindings such as "provide" or "connect" and those will hide from you the "subscribe" method.
 
 // So yeah, the "subscribe" method will still be used but it will be done through a higher order API that
-// handles access to redux state for you.
+// handles access to Redux state for you.
 
 // We'll now cover those bindings and show how simple it is to wire your components to Redux's state.
 
