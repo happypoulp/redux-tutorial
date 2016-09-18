@@ -9,12 +9,12 @@
 // 2) the connect function
 
 // But before we get to that, let's see the basic setup of this application and how it
-// will be served to browser...
+// will be served to a browser...
 
 // We won't use Express (http://expressjs.com/) in this app since we don't really need
 // it to serve a simple html page.
 
-// "http" module will be used to create the http server
+// "http" module will be used to create the HTTP server
 import http from 'http'
 import React from 'react'
 
@@ -30,7 +30,7 @@ var server = http.createServer(function(req, res) {
 
   // And of course, here is our Application HTML that we're sending back to the browser.
   // Nothing special here except the URI of our application JS bundle that points to our
-  // webpack dev server (located at http://localhost:5051)
+  // Webpack dev server (located at http://localhost:5051)
   res.write(
     `<!DOCTYPE html>
     <html>
@@ -49,6 +49,6 @@ var server = http.createServer(function(req, res) {
 
 export default server
 
-// Go to ./index.jsx, where our app is initialized. For those of you who are not familiar with webpack,
+// Go to ./index.jsx, where our app is initialized. For those of you who are not familiar with Webpack,
 // index.jsx is defined as the entry point (the first file) of our JS bundle (in 11_src/webpack.config.js)
 // and is automatically executed when the JS bundle is loaded in our browser.

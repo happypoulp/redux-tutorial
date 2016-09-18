@@ -18,7 +18,7 @@ import { createStore } from 'redux'
 var store_0 = createStore(() => {})
 
 // ... so that Redux can call this function on your application state each time an action occurs.
-// Giving reducer(s) to createStore is exactly how redux registers the action "handlers" (read reducers) we
+// Giving reducer(s) to createStore is exactly how Redux registers the action "handlers" (read reducers) we
 // were talking about in section 01_simple-action-creator.js.
 
 // Let's put some log in our reducer
