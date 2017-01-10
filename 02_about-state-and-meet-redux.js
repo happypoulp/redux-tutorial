@@ -10,7 +10,7 @@
 
 // Here comes Redux.
 
-// Redux (https://github.com/rackt/redux) is a "predictable state container for JavaScript apps"
+// Redux (https://github.com/reactjs/redux) is a "predictable state container for JavaScript apps"
 
 // Let's review the above questions and reply to them with
 // Redux vocabulary (flux vocabulary too for some of them):

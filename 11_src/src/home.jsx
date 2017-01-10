@@ -29,7 +29,7 @@
 // The "connect" HOC is designed to address all use-cases, from the most simple to the most
 // complex ones. In the present example, we're not going to use the most complex form of 'connect' but
 // you can find all information about it in the complete 'connect' API documentation here:
-// https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
+// https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
 
 // Here is the complete 'connect' signature:
 // connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])
@@ -64,7 +64,7 @@ class Home extends React.Component {
     // We use here the dispatch function "automatically" provided by connect in a prop.
     // There are alternative ways to call actionCreators that are already bound to dispatch and those
     // imply providing the second parameter to 'connect':
-    // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
+    // https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
     // The "delay" value given to actionCreators.getTime is a delay to simulate an async work being done before we
     // are able to get the current time. Try to change this value to verify that the delay correctly impacts our UI.
     this.props.dispatch(actionCreators.getTime(delay))
@@ -112,7 +112,7 @@ const mapStateToProps = (state/*, props*/) => {
     time: state._time.time,
     // It is very bad practice to provide the full state like that (reduxState: state) and it is only done here
     // for you to see its stringified version in our page. More about that here:
-    // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#inject-dispatch-and-every-field-in-the-global-state
+    // https://github.com/reactjs/react-redux/blob/master/docs/api.md#inject-dispatch-and-every-field-in-the-global-state
     reduxState: state,
   }
 }
