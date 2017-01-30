@@ -80,7 +80,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 // "Predictable state container for JavaScript apps" and you can use it in many ways, a React
 // application just being one of them.
 
-// In that perspective we would be a bit lost if it wasn't for react-redux (https://github.com/rackt/react-redux).
+// In that perspective we would be a bit lost if it wasn't for react-redux (https://github.com/reactjs/react-redux).
 // Previously integrated inside Redux (before 1.0.0), this repository holds all the bindings we need to simplify
 // our life when using Redux inside React.
 
