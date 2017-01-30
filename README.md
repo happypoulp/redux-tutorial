@@ -21,7 +21,7 @@ It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly
 
 This tutorial is split into a sequence of javascript files that are intended to be read in order. 
 
-Start with the first tutorial: [Introduction](00_introduction.js)
+Start with the first tutorial: [Introduction](https://github.com/happypoulp/redux-tutorial/wiki)
 
 ### Run an example
 
