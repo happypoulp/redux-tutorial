@@ -17,6 +17,10 @@ It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly
 ### Install dependencies
 `npm install`
 
+Be sure you have the babel-cli installed. If not:
+
+`npm install babel-cli -g`
+
 ### Browse the tutorial
 
 This tutorial is split into a sequence of javascript files that are intended to be read in order. 
