@@ -1,4 +1,4 @@
-// Tutorial 12 - Provider-and-connect.js
+// Tutorial 11 - Provider-and-connect.js
 
 // This file holds the one and only reducer of our application. Its behavior is nothing new to you
 // except maybe its handling of three aspects of an action (GET_TIME) that become 3 dedicated actions...

@@ -1,4 +1,4 @@
-// Tutorial 12 - Provider-and-connect.js
+// Tutorial 11 - Provider-and-connect.js
 
 // We're using Bluebird (https://github.com/petkaantonov/bluebird) as promise library but you could really
 // use any promise lib you want.

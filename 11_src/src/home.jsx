@@ -1,4 +1,4 @@
-// Tutorial 12 - Provider-and-connect.js
+// Tutorial 11 - Provider-and-connect.js
 
 // Our tutorial is almost over and the only missing piece to leave you with a good overview of Redux is:
 // How do we read from our store's state and how do we dispatch actions?
