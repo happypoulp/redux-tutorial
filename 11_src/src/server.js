@@ -1,4 +1,4 @@
-// Tutorial 12 - Provider-and-connect.js
+// Tutorial 11 - Provider-and-connect.js
 
 // Hi there! So you're ready to play with Redux in a React app?
 

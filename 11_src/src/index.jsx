@@ -1,4 +1,4 @@
-// Tutorial 12 - Provider-and-connect.js
+// Tutorial 11 - Provider-and-connect.js
 
 // This file is the entry point of our JS bundle. It's here that we'll create our Redux store,
 // instantiate our React Application root component and attach it to the DOM.

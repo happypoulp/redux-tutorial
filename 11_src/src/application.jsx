@@ -1,4 +1,4 @@
-// Tutorial 12 - Provider-and-connect.js
+// Tutorial 11 - Provider-and-connect.js
 
 // Now is the time to meet the first binding that redux-react (https://github.com/reactjs/react-redux)
 // brings to us: the Provider component.
