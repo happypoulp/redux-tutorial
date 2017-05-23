@@ -8,6 +8,16 @@ The official and very exhaustive Redux documentation is available [here](http://
 ### Prerequisites
 It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly understand some of the examples given in this repo. Also be aware that this tutorial targets redux 3.0.2 and react-redux 4.0.0.
 
+### Nitrous Quickstart
+
+You can quickly create a free development environment for this redux-tutorial project in the cloud on www.nitrous.io:
+
+<a href="https://www.nitrous.io/quickstart">
+  <img src="https://nitrous-image-icons.s3.amazonaws.com/quickstart.png" alt="Nitrous Quickstart" width=142 height=34>
+</a>
+
+Simply run `npm run example 01_simple-action-creator.js` from the terminal inside of `~/code/redux-tutorial/`
+
 ### Clone the repository
 `git clone https://github.com/happypoulp/redux-tutorial.git`
 
