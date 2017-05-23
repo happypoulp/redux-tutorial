@@ -174,7 +174,7 @@ export default ConnectedHome
 // As you can see the application of the HOC function on the component class is now made implicit ( @connect(mapStateToProps) )
 // instead of calling it ourselves ( @connect(mapStateToProps)(Myclass) ). Some find this approach more elegant, others
 // dislike the fact that it's hiding what is really happening and many just don't get how decorators works. Knowing all that
-// and remembering that decorators are still experimental, you can now decide by youselves which "connect" usage you
-// prefer and you won't be suprised to find both syntax in the many articles, tutorials, starter kits, etc. out there.
+// and remembering that decorators are still experimental, you can now decide by yourselves which "connect" usage you
+// prefer and you won't be surprised to find both syntax in the many articles, tutorials, starter kits, etc. out there.
 
 // Go to ./12_final-words.js for our last advice about what to do now...
