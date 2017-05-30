@@ -19,13 +19,13 @@ It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly
 
 ### Browse the tutorial
 
-This tutorial is split into a sequence of javascript files that are intended to be read in order. 
+This tutorial is split into a sequence of JavaScript files that are intended to be read in-order. 
 
 Start with the first tutorial: [Introduction](00_introduction.js)
 
 ### Run an example
 
-Being real js files, each example can be run to verify that it works as intended or to do your own experiments:
+Being real JS files, each example can be run to verify that it works as intended:
 
 `npm run example 01_simple-action-creator.js`
 
