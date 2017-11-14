@@ -16,7 +16,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux'
 import promiseMiddleware from './promise-middleware'
 // We'll just have one reducer in this application but the ES6 import notation below is
 // pretty interesting to import and produce a reducers hash in one go. Have a look in
-// ./reducers.js to see what our reducer actually do (no magic there).
+// ./reducers.js to see what our reducers actually do (no magic there).
 import * as reducers from './reducers'
 
 // The data parameter that we see here is used to initialize our Redux store with data. We didn't
