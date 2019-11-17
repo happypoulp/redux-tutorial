@@ -8,3 +8,6 @@ jobs:
       - run: echo "hello world" # run the `echo` command
       - run: date
       - run: node --version
+      - run: node -e "console.log(1)"
+      - run: node -e "setTimeout(() => console.log(2), 1000)"
+      - run: node -e "console.log(3)"
