@@ -9,13 +9,19 @@ The official and very exhaustive Redux documentation is available [here](http://
 It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly understand some of the examples given in this repo. Also be aware that this tutorial targets redux 3.0.2 and react-redux 4.0.0.
 
 ### Clone the repository
-`git clone https://github.com/happypoulp/redux-tutorial.git`
+```
+git clone https://github.com/happypoulp/redux-tutorial.git
+```
 
 ### Move into repository
-`cd redux-tutorial`
+```
+cd redux-tutorial
+```
 
 ### Install dependencies
-`npm install`
+```
+npm install
+```
 
 ### Browse the tutorial
 
@@ -27,6 +33,8 @@ Start with the first tutorial: [Introduction](00_introduction.js)
 
 Being real js files, each example can be run to verify that it works as intended or to do your own experiments:
 
-`npm run example 01_simple-action-creator.js`
+```
+npm run example 01_simple-action-creator.js
+```
 
 Enjoy!
